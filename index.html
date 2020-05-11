@@ -466,7 +466,7 @@
 				color: #fff;
 				background-size: cover;
 				background-repeat: no-repeat;
-				background-image: url('images/bg.png');
+				background-image: url('portfolio/images/bg.png');
 			}
 
 			.cartao h1{
@@ -574,12 +574,23 @@
 			}
 
 			#divEquipe .sociais{
+				display: grid;
+			}
+
+			#divEquipe .sociais .paulo{
+				grid-template-columns: 20% 20% 20% 20%;
+			}
+
+			#divEquipe .sociais .bruno, #divEquipe .sociais .luis{
+				grid-template-columns: 20% 20%;
+			}
+
+			#divEquipe div.sociais{
 				height: 30px;
 				//filter: invert(1);
+				grid-template-columns: 25% 25% 25% 25%;
 				min-width: 100px;
-				grid-template-columns: 20% 20% 20% 20%;
 				width: 100%;
-				margin: 0px 20%;
 			}
 			
 			#gradeVid a:hover{
@@ -904,7 +915,7 @@
 		<div class="apresentacao" id="apresentacao">
 
 			<div class="play-animation">
-				<div class="divisor banner1" style="background-image: url('portfolio/media/capa.nyak.naoDeixeORioLevar/bannerNyak.jpg')">
+				<div class="divisor banner1" style="background-image: url('portfolio/media/capa.nyak.naoDeixeORioLevar/nyak.png')">
 				  
 					<div class="camposDeTexto">
 						
@@ -1036,7 +1047,7 @@
 								</section>
 								<p class="montserrat"><b>BRUNO MOURA</b></p>
 								<p class="montserrat">Diretor de Fotografia</p>
-								<div class="sociais">
+								<div class="sociais bruno">
 									<span></span>
 									<a href="#primeiro" style="background-image:url('logos/instagramDark.png')"></a>
 									<a href="#primeiro" style="background-image:url('logos/flickrDark.png')"></a>
@@ -1049,7 +1060,7 @@
 								</section>
 								<p class="montserrat"><b>PAULO GOMES</b></p>
 								<p class="montserrat">Diretor de Arte</p>
-								<div class="sociais">
+								<div class="sociais paulo">
 									<a href="#primeiro" style="background-image:url('logos/instagramDark.png')"></a>
 									<a href="#primeiro" style="background-image:url('logos/facebookDark.png')"></a>
 									<a href="#primeiro" style="background-image:url('logos/behancepreto.png')"></a>
@@ -1062,7 +1073,7 @@
 								</section>
 								<p class="montserrat"><b> LUIS LIMA</b></p>
 								<p class="montserrat">Desenvolvedor Web</p>
-								<div class="sociais">
+								<div class="sociais luis">
 									<span></span>
 									<a href="#primeiro" style="background-image:url('logos/facebookDark.png')"></a>
 									<a href="#primeiro" style="background-image:url('logos/githubDark.png')"></a>
