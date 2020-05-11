@@ -561,7 +561,7 @@
 			#divEquipe h5{ font-weight: 600 }
 			
 			#divEquipe .sociais a:hover{
-				background-color: rgba(0,0,0,1.0);
+				transform: scale(1.1)
 			}
 
 			#divEquipe a.botao{
@@ -577,14 +577,6 @@
 				display: grid;
 			}
 
-			#divEquipe .sociais .paulo{
-				grid-template-columns: 20% 20% 20% 20%;
-			}
-
-			#divEquipe .sociais .bruno, #divEquipe .sociais .luis{
-				grid-template-columns: 20% 20%;
-			}
-
 			#divEquipe div.sociais{
 				height: 30px;
 				//filter: invert(1);
@@ -594,7 +586,7 @@
 			}
 			
 			#gradeVid a:hover{
-				background-color: #888;
+				transform: scale(1.1);
 			}
 
 			#gradeVid a{
@@ -1145,9 +1137,9 @@ tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim v
 						<h1 id="site" class="monoSpace" style="font-size: 34px;">PARCEIROS</h1>
 						<div id="gradeParsa">
 							<section style="background-image: url('logos/mfLogo.png')">Maia's Family</section>
-							<section style="background-image: url('logos/bfco.png')">Big Field CO.</section>
-							<section style="background-image: url('logos/zhLogo.png')">Zero Hora</section>
-							<section style="background-image: url('logos/wm.png')">WMBeats</section>
+							<section style="background-image: url('portfolio/logos/bfco.png')">Big Field CO.</section>
+							<section style="background-image: url('portfolio/logos/ZH.png')">Zero Hora</section>
+							<section style="background-image: url('portfolio/logos/wm.png')">WMBeats</section>
 						</div>
 					</div>
 				</div>
@@ -1222,16 +1214,24 @@ tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim v
 			//console.log(link);
 			numtrab++;
 		}
-			espacoDeSobra = ( altura - getByClass("camposDeTexto")[0].offsetHeight );
-			getByClass("divisor")[0].style.padding = (espacoDeSobra / 2) +"px 0px";
-			getByClass("divisor")[1].style.padding = (espacoDeSobra / 2) +"px 0px";
-			getByClass("divisor")[2].style.padding = (espacoDeSobra / 2) +"px 0px";
-			getById("tudo").style.paddingTop = getByClass("divisor")[0].offsetHeight +"px";
-			//getById("indicadoresBanner").style.top = ( altura - 70 ) +"px";
-			//getById("rodape").style.height = ( altura / 2 )+"px";
-			//getById("comandosBanner").style.paddingTop = ( ( altura / 2 ) - 100).toString().replace(".","").slice(0,3) + "px";
-			//getById("comandosBanner").style.paddingBottom = ( ( altura / 2 ) - 50).toString().replace(".","").slice(0,3) + "px";
-			tamanhosDiv();
+
+		
+		getByClass("numero0")[0].style.height = getByClass("numero0")[0].offsetWidth + "px";
+		getByClass("numero1")[0].style.height = getByClass("numero1")[0].offsetWidth + "px";
+		getByClass("numero2")[0].style.height = getByClass("numero2")[0].offsetWidth + "px";
+		getByClass("numero3")[0].style.height = getByClass("numero3")[0].offsetWidth + "px";
+		getByClass("numero4")[0].style.height = getByClass("numero4")[0].offsetWidth + "px";
+
+		espacoDeSobra = ( altura - getByClass("camposDeTexto")[0].offsetHeight );
+		getByClass("divisor")[0].style.padding = (espacoDeSobra / 2) +"px 0px";
+		getByClass("divisor")[1].style.padding = (espacoDeSobra / 2) +"px 0px";
+		getByClass("divisor")[2].style.padding = (espacoDeSobra / 2) +"px 0px";
+		getById("tudo").style.paddingTop = getByClass("divisor")[0].offsetHeight +"px";
+		//getById("indicadoresBanner").style.top = ( altura - 70 ) +"px";
+		//getById("rodape").style.height = ( altura / 2 )+"px";
+		//getById("comandosBanner").style.paddingTop = ( ( altura / 2 ) - 100).toString().replace(".","").slice(0,3) + "px";
+		//getById("comandosBanner").style.paddingBottom = ( ( altura / 2 ) - 50).toString().replace(".","").slice(0,3) + "px";
+		tamanhosDiv();
 
 		setTimeout(function(){
 			getById("carregando").style.display = "none";
@@ -1272,6 +1272,11 @@ tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim v
 		
 		window.addEventListener("resize", function(){
 			//getById("indicadoresBanner").style.top = ( altura - 70 )+"px";
+			getByClass("numero0")[0].style.height = getByClass("numero0")[0].offsetWidth + "px";
+			getByClass("numero1")[0].style.height = getByClass("numero1")[0].offsetWidth + "px";
+			getByClass("numero2")[0].style.height = getByClass("numero2")[0].offsetWidth + "px";
+			getByClass("numero3")[0].style.height = getByClass("numero3")[0].offsetWidth + "px";
+			getByClass("numero4")[0].style.height = getByClass("numero4")[0].offsetWidth + "px";
 			getByClass("componenteEquipe")[0].style.height = getByClass("componenteEquipe")[0].offsetWidth + "px";
 			getByClass("componenteEquipe")[1].style.height = getByClass("componenteEquipe")[1].offsetWidth + "px";
 			getByClass("componenteEquipe")[2].style.height = getByClass("componenteEquipe")[2].offsetWidth + "px";
