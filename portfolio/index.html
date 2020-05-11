@@ -117,15 +117,15 @@
 				grid-template-columns: 33% 33% 33%;
 			}
 			
-			div.projetoAberto a#btFecha{
-				padding: 50px;
-				position: fixed;
+			div#projetoAberto #btFecha{ 
 				color: white;
 				text-decoration: none;
-				font-size: 15pt;
+				font-size: 25pt;
+				background-color: red;
+				text-align: center;
 			}
 
-			.projetoAberto{
+			#projetoAberto{
 				padding: 0px;
 				margin: 0px;
 			}
@@ -472,7 +472,7 @@
 				background-color: #191919;
 			}
 			
-			#tituloDaPagina h1{
+			.cartao #tituloDaPagina h1{
 				font-size: 60pt;
 				text-align: center
 			}
@@ -557,7 +557,7 @@
 			#divEquipe h5{ font-weight: 600 }
 			
 			#divEquipe .sociais a:hover{
-				background-color: rgba(0,0,0,1.0);
+				transform: scale(1.1);
 			}
 
 			#divEquipe a.botao{
@@ -572,10 +572,9 @@
 			#divEquipe .sociais{
 				height: 30px;
 				//filter: invert(1);
+				grid-template-columns: 25% 25% 25% 25%;
 				min-width: 100px;
-				grid-template-columns: 20% 20% 20%;
 				width: 100%;
-				margin: 0px 20%;
 			}
 			
 			#gradeVid a:hover{
@@ -1041,10 +1040,10 @@
 					<div id="parceiros" class="">
 						<h1 id="site" class="monoSpace" style="font-size: 34px;">PARCEIROS</h1>
 						<div id="gradeParsa">
-							<section style="background-image: url('http://localhost/rastro/logos/mfLogo.png')">Maia's Family</section>
-							<section style="background-image: url('http://localhost/rastro/logos/bfco.png')">Big Field CO.</section>
-							<section style="background-image: url('http://localhost/rastro/logos/zhLogo.png')">Zero Hora</section>
-							<section style="background-image: url('http://localhost/rastro/logos/wm.png')">WMBeats</section>
+							<section style="background-image: url('logos/mfLogo.png')">Maia's Family</section>
+							<section style="background-image: url('portfolio/logos/bfco.png')">Big Field CO.</section>
+							<section style="background-image: url('portfolio/logos/ZH.png')">Zero Hora</section>
+							<section style="background-image: url('portfolio/logos/wm.png')">WMBeats</section>
 						</div>
 					</div>
 				</div>
@@ -1161,7 +1160,7 @@
 		
 		function fechar(){
 			document.getElementById("projetoAberto").innerHTML = ""
-			getById("projetoAberto").style.minHeight = "0px";
+			getById("projetoAberto").style.height = "0px";
 		}
 
 		function tratarConteudo( nomeDoProjeto, cliente, conteudoMesclado ){
