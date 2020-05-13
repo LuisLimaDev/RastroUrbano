@@ -7,7 +7,7 @@
 		
 		<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 		
-		<link rel="icon" type="image/png" href="logos/rastroRounded.png"/>
+		<link rel="icon" type="image/png" href="portfolio/logos/rastroRounded.png"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 		<!---->
@@ -57,7 +57,7 @@
 			
 			#logo, .logo{
 				background-size: contain;
-				background-image: url('logos/rastroLogoLight.png');
+				background-image: url('portfolio/logos/rastroLogoLight.png');
 			}
 
 			#logo{
@@ -333,78 +333,90 @@
 			}
 
 			@keyframes primeira {
-			0% {
-				opacity: 1;  background-position-x: 0%
-			//left: 0%;
-			}
-			30% {
-				opacity: 1;
-			//left: 0%;
-			}
-			33% {
-				opacity: 0; background-position-x: 5%;
-			//left: 100%;
-			}
-			40%{ background-position-x: 0%; }
-			97%{
-			opacity: 0;
-			//left: -100%;
-			}
-			100%{
-			opacity: 1;
-			//left: 0%;
-			}
+				0% {
+					opacity: 1;
+					//background-position-x: 0%
+					left: 0%;
+				}
+				30% {
+					opacity: 1;
+					left: 0%;
+				}
+				33% {
+					opacity: 0;
+					//background-position-x: 5%;
+					left: 100%;
+				}
+				40%{ 
+					background-position-x: 0%;
+					left: -100%;
+				}
+				97%{
+				opacity: 0;
+					left: -100%;
+				}
+				100%{
+					opacity: 1;
+					left: 0%;
+				}
 			}
 			@keyframes segunda {
-			0% {
-			opacity: 0;
-			//left: -100%;
-			}
-			30% {
-			opacity: 0; background-position-x: 50%;
-			//left: -100%;
-			}
-			33% {
-			opacity: 1;
-			//left: 0%;
-			}
-			63% {
-			opacity: 1; 
-			//left: 0%;
-			}
-			66% {
-			opacity: 0;  background-position-x: 40%;
-			//left: 100%;
-			}
-			100%{
-			opacity: 0;
-			//left: 100%;
-			}
+				0% {
+					opacity: 0;
+					left: -100%;
+				}
+				30% {
+					opacity: 0;
+					//background-position-x: 50%;
+					left: -100%;
+				}
+				33% {
+					opacity: 1;
+					left: 0%;
+				}
+				63% {
+					opacity: 1; 
+					left: 0%;
+				}
+				66% {
+					opacity: 0;
+					background-position-x: 40%;
+					left: 100%;
+				}
+				67% {
+					left: -100%;
+				}
+				100%{
+					opacity: 0;
+					left: 100%;
+				}
 			}
 			@keyframes terceira {
-			0% {
-			opacity: 0;
-			//left: -100%;
-			}
-			63% {
-			opacity: 0; background-position-x: 40%;
-			//left: -100%;
-			}
-			66% {
-			opacity: 1; 
-			//left: 0%;
-			}
-			97% {
-			opacity: 1; background-position-x: 50%;
-			//left: 0%;
-			}
-			100%{
-			opacity: 0;
-			//left: 100%;
-			}
+				0% {
+					opacity: 0;
+					left: -100%;
+				}
+				63% {
+					opacity: 0;
+					left: -100%;
+				}
+				66% {
+					opacity: 1; 
+					left: 0%;
+				}
+				97% {
+					opacity: 1;
+					background-position-x: 50%;
+					left: 0%;
+				}
+				100%{
+					background-position-x: 40%;
+					opacity: 0;
+					left: 100%;
+				}
 			}
 			.gen-qbhagwdanimation {
-			left: -300%;
+				//left: -300%;
 			}
 
 
@@ -582,7 +594,8 @@
 				//filter: invert(1);
 				grid-template-columns: 25% 25% 25% 25%;
 				min-width: 100px;
-				width: 100%;
+				width: 120px;
+				margin: 0px auto 20px auto;
 			}
 			
 			#gradeVid a:hover{
@@ -915,7 +928,7 @@
 						<br>
 						<span class="pequeno">NÃO DEIXE O RIO LEVAR</span>
 						<br>
-						<a href="#" class="btBanner">VER MAIS</a>
+						<a href="portfolio/#projetoAberto?id=2" class="btBanner">VER MAIS</a>
 						
 					</div>
 				</div>
@@ -928,7 +941,7 @@
 						<br>
 						<span class="grande">2020</span>
 						<br>
-						<a href="#" class="btBanner">VER MAIS</a>
+						<a href="portfolio/#projetoAberto?id=4" class="btBanner">VER MAIS</a>
 						
 					</div>
 				</div>
@@ -939,7 +952,7 @@
 						<span class="pequeno">PRÊMIO</span><br>
 						<span class="grande">R.U.A.</span>
 						<br>
-						<a href="#" class="btBanner">VER MAIS</a>
+						<a href="portfolio/#projetoAberto?id=1" class="btBanner">VER MAIS</a>
 						
 					</div>
 				</div>
@@ -960,9 +973,9 @@
 					</div>
 
 					<div id="" class="sociais">
-						<a href="#primeiro" style="background-image:url('logos/fblogo.png')"></a>
-						<a href="#primeiro" style="background-image:url('logos/instalogo.png')"></a>
-						<a href="#primeiro" style="background-image:url('logos/youtubeQuadradoBranco.png')"></a>
+						<a href="#primeiro" style="background-image:url('portfolio/logos/fblogo.png')"></a>
+						<a href="#primeiro" style="background-image:url('portfolio/logos/instalogo.png')"></a>
+						<a href="#primeiro" style="background-image:url('portfolio/logos/youtubeQuadradoBranco.png')"></a>
 					</div>
 					
 					
@@ -978,9 +991,9 @@
 					<a href="#videos">BLOG</a>
 					<a href="#final">CONTATO</a>
 					<div id="" class="sociais">
-						<a href="#primeiro" style="background-image:url('logos/fblogo.png')"></a>
-						<a href="#primeiro" style="background-image:url('logos/instalogo.png')"></a>
-						<a href="#primeiro" style="background-image:url('logos/youtubeQuadradoBranco.png')"></a>
+						<a href="#primeiro" style="background-image:url('portfolio/logos/fblogo.png')"></a>
+						<a href="#primeiro" style="background-image:url('portfolio/logos/instalogo.png')"></a>
+						<a href="#primeiro" style="background-image:url('portfolio/logos/youtubeQuadradoBranco.png')"></a>
 					</div>
 				</div>
 			</header>
@@ -1041,8 +1054,8 @@
 								<p class="montserrat">Diretor de Fotografia</p>
 								<div class="sociais bruno">
 									<span></span>
-									<a href="#primeiro" style="background-image:url('logos/instagramDark.png')"></a>
-									<a href="#primeiro" style="background-image:url('logos/flickrDark.png')"></a>
+									<a href="#primeiro" style="background-image:url('portfolio/logos/instagramDark.png')"></a>
+									<a href="#primeiro" style="background-image:url('portfolio/logos/flickrDark.png')"></a>
 									<span></span>
 								</div>
 							</div>
@@ -1053,10 +1066,10 @@
 								<p class="montserrat"><b>PAULO GOMES</b></p>
 								<p class="montserrat">Diretor de Arte</p>
 								<div class="sociais paulo">
-									<a href="#primeiro" style="background-image:url('logos/instagramDark.png')"></a>
-									<a href="#primeiro" style="background-image:url('logos/facebookDark.png')"></a>
-									<a href="#primeiro" style="background-image:url('logos/behancepreto.png')"></a>
-									<a href="#primeiro" style="background-image:url('logos/youtubeQuadradoPreto.png')"></a>
+									<a href="#primeiro" style="background-image:url('portfolio/logos/instagramDark.png')"></a>
+									<a href="#primeiro" style="background-image:url('portfolio/logos/facebookDark.png')"></a>
+									<a href="#primeiro" style="background-image:url('portfolio/logos/behancepreto.png')"></a>
+									<a href="#primeiro" style="background-image:url('portfolio/logos/youtubeQuadradoPreto.png')"></a>
 								</div>
 							</div>
 							<div>
@@ -1067,8 +1080,8 @@
 								<p class="montserrat">Desenvolvedor Web</p>
 								<div class="sociais luis">
 									<span></span>
-									<a href="#primeiro" style="background-image:url('logos/facebookDark.png')"></a>
-									<a href="#primeiro" style="background-image:url('logos/githubDark.png')"></a>
+									<a href="#primeiro" style="background-image:url('portfolio/logos/facebookDark.png')"></a>
+									<a href="#primeiro" style="background-image:url('portfolio/logos/githubDark.png')"></a>
 									<span></span>
 								</div>
 							</div>
@@ -1136,7 +1149,7 @@ tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim v
 					<div id="parceiros" class="">
 						<h1 id="site" class="monoSpace" style="font-size: 34px;">PARCEIROS</h1>
 						<div id="gradeParsa">
-							<section style="background-image: url('logos/mfLogo.png')">Maia's Family</section>
+							<section style="background-image: url('portfolio/logos/mfLogo.png')">Maia's Family</section>
 							<section style="background-image: url('portfolio/logos/bfco.png')">Big Field CO.</section>
 							<section style="background-image: url('portfolio/logos/ZH.png')">Zero Hora</section>
 							<section style="background-image: url('portfolio/logos/wm.png')">WMBeats</section>
@@ -1204,9 +1217,9 @@ tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim v
 		
 		while( trabalhos.length > numtrab ){
 			link = document.createElement("a");
-			link.href = trabalhos[numtrab][0].link;
+			link.href = "portfolio/#projetoAberto?id=" + numtrab;
 			link.innerHTML = "<h5>" + trabalhos[numtrab][0].nome + "</h5><h6>" + trabalhos[numtrab][0].artista + "</h6>";
-			link.target = "_blank";
+			//link.target = "_blank";
 			link.setAttribute( "class", "numero" + numtrab );
 			link.style.backgroundImage = "url('" + trabalhos[numtrab][0].capa +"')";
 			//divisor.appendChild( link );

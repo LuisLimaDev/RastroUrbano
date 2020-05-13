@@ -4,7 +4,7 @@
 		<title>Rastro Urbano :: Protfolio</title>
 		<meta charset="UTF-8">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-		<link rel="icon" type="image/png" href="http://localhost/rastro/logos/rastroRounded.png"/>
+		<link rel="icon" type="image/png" href="logos/rastroRounded.png"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 		<!---->
@@ -53,7 +53,7 @@
 			
 			#logo, .logo{
 				background-size: contain;
-				background-image: url('http://localhost/rastro/logos/rastroLogoLight.png');
+				background-image: url('logos/rastroLogoLight.png');
 			}
 
 			#logo{
@@ -121,6 +121,7 @@
 				color: white;
 				text-decoration: none;
 				font-size: 25pt;
+				line-height: 80px;
 				background-color: red;
 				text-align: center;
 			}
@@ -150,249 +151,19 @@
 			#projetoAberto img, #projetoAberto iframe{
 				width: 100%;
 			}
+			
+			div#divConteudo{
+				padding: 100px 0px;
+			}
 
 			.montserrat{
 				font-family: 'Montserrat', sans-serif;
 			}
 
-			.monoSpace{
-				//font-family: 'Rheiborn';
-				//letter-spacing: -2px;
-				//src: url('rheiborn.otf')
-			}
-			
-			#atalhoContato #fotos div:hover a{
-				display: block;
-				margin: 0px 0px 0px 20px;
-				position: absolute;
-				right: 20px;
-				width: 245px;
-				color: #ffffff;
-				background-color: #000000;
-				margin: 5px 0px;
-				//line-height: 3px;
-				border-radius: 22px;
-				padding: 5px 20px;
-				background-size: 45px;
-				background-repeat: no-repeat;
-				background-position: right;
-			}
-			
-			#atalhoContato:hover span{
-				position: absolute;
-				right: 50px;
-				display: block;
-				background-color: #ffffff;
-			}
-
-			#atalhoContato #fotos div:hover{
-				//transform: scale(1.5);
-				//width: 245px;
-			}
-
-			#atalhoContato #fotos div section{
-				background-position: 50%;
-				background-size: cover;
-				width: 45px;
-				background-size: cover;
-				background-position: 50%;
-				height: 45px;
-				border-radius: 50%;
-				margin: 5px 0px;
-			}
-			
-			#atalhoContato #fotos div a h5, #atalhoContato #fotos div a h6, #atalhoContato span {
-				font-size: 8pt;
-				width: 120px;
-			}
-
-			#atalhoContato section{
-				font-size: 14pt;
-				right: 10px;
-				top: 60px;
-				line-height: 45px;
-				border-radius: 50%;
-				color: #fff;
-				background-color: #000000;
-				text-align: center;
-				width: 45px;
-				//border: 2px solid #aaa;
-			}
-
-			#atalhoContato:hover div#fotos{
-				display: block;
-			}
-			
-			div#fotos div {
-				display: grid;
-				grid-template-columns: 70% 20%;
-			}
-
-			#atalhoContato:hover span{ display: block}
-			#atalhoContato:hover section{
-				background-color: #fff;
-				color: #000;
-				//border: 2px solid #000;
-			}
-
-			#atalhoContato{
-				position: fixed;
-				top: 60px;
-				right: 20px;
-				padding: 0px 20px;
-			}
-			
-			h1 .monoSpace{
-				font-size: 60pt;
-			}
-			
 			@font-face{
 				font-family: 'Rheiborn';
 				src: url('rheiborn.otf')
 			}
-			
-			div #aId h1{
-				font-size: 70pt;
-				line-height: 100px;
-				//transform: scale(2.0);
-			}
-
-			#aId{
-				font-size: 34pt;
-				color: #fff;
-				padding: 0px 10px 0px 60%;
-			}
-			
-			#indicadoresBanner{
-				display: grid;
-				grid-template-columns: 20px 20px 20px;
-				grid-gap: 15px;
-				width: 20px;
-				height: 20px;
-				position: absolute;
-				right: 10%;
-			}
-
-			#indicadoresBanner section:hover{
-				background-color: rgba(100,100,100,0.5);
-				color: rgba(255,255,255,1.0);
-			}
-
-			#indicadoresBanner section{
-				background-color: rgba(255,255,255,0.3);
-				text-align: center;
-				padding: 10px 0px;
-				margin: 5px 0px;
-				border-radius: 50%;
-				color: rgba(255,255,255,0.0);
-			}
-			
-			#apresentacao{ overflow: none }
-			
-			#apresentacao .play-animation .banner1 {
-			animation: 12s linear 0s infinite normal forwards running primeira;
-			}
-			#apresentacao .play-animation .banner2 {
-			animation: 12s linear 0s infinite normal forwards running segunda;
-			}
-			#apresentacao .play-animation .banner3 {
-			animation: 12s linear 0s infinite normal forwards running terceira;
-			}
-			div.divisor .camposDeTexto {
-				animation: 12s linear 0s infinite normal forwards running animTextoBanner;
-			}
-			@keyframes animTextoBanner {
-				0%{ opacity: 0; }
-				3%{ opacity: 1; }
-				27%{ opacity: 1; }
-				30%{ opacity: 0; }
-				36%{ opacity: 0; }
-				39%{ opacity: 1; }
-				60%{ opacity: 1; }
-				63%{ opacity: 0; }
-				69%{ opacity: 0; }
-				72%{ opacity: 1; }
-				97%{ opacity: 1; }
-				99%{ opacity: 0; }
-				100%{ opacity: 0; }
-			}
-
-			@keyframes primeira {
-			0% {
-				opacity: 1;  background-position-x: 0%
-			//left: 0%;
-			}
-			30% {
-				opacity: 1;
-			//left: 0%;
-			}
-			33% {
-				opacity: 0; background-position-x: 5%;
-			//left: 100%;
-			}
-			40%{ background-position-x: 0%; }
-			97%{
-			opacity: 0;
-			//left: -100%;
-			}
-			100%{
-			opacity: 1;
-			//left: 0%;
-			}
-			}
-			@keyframes segunda {
-			0% {
-			opacity: 0;
-			//left: -100%;
-			}
-			30% {
-			opacity: 0; background-position-x: 50%;
-			//left: -100%;
-			}
-			33% {
-			opacity: 1;
-			//left: 0%;
-			}
-			63% {
-			opacity: 1; 
-			//left: 0%;
-			}
-			66% {
-			opacity: 0;  background-position-x: 40%;
-			//left: 100%;
-			}
-			100%{
-			opacity: 0;
-			//left: 100%;
-			}
-			}
-			@keyframes terceira {
-			0% {
-			opacity: 0;
-			//left: -100%;
-			}
-			63% {
-			opacity: 0; background-position-x: 40%;
-			//left: -100%;
-			}
-			66% {
-			opacity: 1; 
-			//left: 0%;
-			}
-			97% {
-			opacity: 1; background-position-x: 50%;
-			//left: 0%;
-			}
-			100%{
-			opacity: 0;
-			//left: 100%;
-			}
-			}
-			.gen-qbhagwdanimation {
-			left: -300%;
-			}
-
-
 			
 			a.botao:hover, input.botao:hover{
 				border: 1px solid rgba(0,0,0,0.3);
@@ -472,7 +243,7 @@
 				background-color: #191919;
 			}
 			
-			.cartao #tituloDaPagina h1{
+			#portfolio .cartao #tituloDaPagina h1{
 				font-size: 60pt;
 				text-align: center
 			}
@@ -507,9 +278,12 @@
 				background-position: 50%;
 			}
 
+			div#barraTitulo h3{
+			}
+
 			div#barraTitulo{
 				display: grid;
-				grid-template-columns: 40% 30% 50px;
+				grid-template-columns: 50% 30% 80px;
 				justify-content: space-between;
 				position: fixed;
 				width: 100%;
@@ -574,7 +348,8 @@
 				//filter: invert(1);
 				grid-template-columns: 25% 25% 25% 25%;
 				min-width: 100px;
-				width: 100%;
+				width: 120px;
+				margin: 0px auto 20px auto;
 			}
 			
 			#gradeVid a:hover{
@@ -860,7 +635,7 @@
 				border-style: solid;
 				border-color: #4EB191 #E2517E #4EB191 #E2517E;
 				border-radius: 50%;
-				animation: 3s carregando infinite linear;
+				animation: 3s carregando infinite;
 			}
 			
 			@keyframes carregando{
@@ -908,9 +683,9 @@
 					</div>
 
 					<div id="" class="sociais">
-						<a href="#primeiro" style="background-image:url('http://localhost/rastro/logos/fblogo.png')"></a>
-						<a href="#primeiro" style="background-image:url('http://localhost/rastro/logos/instalogo.png')"></a>
-						<a href="#primeiro" style="background-image:url('http://localhost/rastro/logos/youtubeQuadradoBranco.png')"></a>
+						<a href="#primeiro" style="background-image:url('logos/fblogo.png')"></a>
+						<a href="#primeiro" style="background-image:url('logos/instalogo.png')"></a>
+						<a href="#primeiro" style="background-image:url('logos/youtubeQuadradoBranco.png')"></a>
 					</div>
 					
 					
@@ -927,9 +702,9 @@
 					<a href="http://localhost/rastro#final">CONTATO</a>
 
 					<div id="" class="sociais">
-						<a href="#primeiro" style="background-image:url('http://localhost/rastro/logos/fblogo.png')"></a>
-						<a href="#primeiro" style="background-image:url('http://localhost/rastro/logos/instalogo.png')"></a>
-						<a href="#primeiro" style="background-image:url('http://localhost/rastro/logos/youtubeQuadradoBranco.png')"></a>
+						<a href="#primeiro" style="background-image:url('logos/fblogo.png')"></a>
+						<a href="#primeiro" style="background-image:url('logos/instalogo.png')"></a>
+						<a href="#primeiro" style="background-image:url('logos/youtubeQuadradoBranco.png')"></a>
 					</div>
 				</div>
 			</header>
@@ -973,8 +748,8 @@
 								<p class="montserrat">Diretor de Fotografia</p>
 								<div class="sociais">
 									<span></span>
-									<a href="#primeiro" style="background-image:url('http://localhost/rastro/logos/instagramDark.png')"></a>
-									<a href="#primeiro" style="background-image:url('http://localhost/rastro/logos/flickrDark.png')"></a>
+									<a href="#primeiro" style="background-image:url('logos/instagramDark.png')"></a>
+									<a href="#primeiro" style="background-image:url('logos/flickrDark.png')"></a>
 									<span></span>
 								</div>
 							</div>
@@ -985,10 +760,10 @@
 								<p class="montserrat"><b>PAULO GOMES</b></p>
 								<p class="montserrat">Diretor de Arte</p>
 								<div class="sociais">
-									<a href="#primeiro" style="background-image:url('http://localhost/rastro/logos/instagramDark.png')"></a>
-									<a href="#primeiro" style="background-image:url('http://localhost/rastro/logos/facebookDark.png')"></a>
-									<a href="#primeiro" style="background-image:url('http://localhost/rastro/logos/behancepreto.png')"></a>
-									<a href="#primeiro" style="background-image:url('http://localhost/rastro/logos/youtubeQuadradoPreto.png')"></a>
+									<a href="#primeiro" style="background-image:url('logos/instagramDark.png')"></a>
+									<a href="#primeiro" style="background-image:url('logos/facebookDark.png')"></a>
+									<a href="#primeiro" style="background-image:url('logos/behancepreto.png')"></a>
+									<a href="#primeiro" style="background-image:url('logos/youtubeQuadradoPreto.png')"></a>
 								</div>
 							</div>
 							<div>
@@ -999,8 +774,8 @@
 								<p class="montserrat">Desenvolvedor Web</p>
 								<div class="sociais">
 									<span></span>
-									<a href="#primeiro" style="background-image:url('http://localhost/rastro/logos/facebookDark.png')"></a>
-									<a href="#primeiro" style="background-image:url('http://localhost/rastro/logos/githubDark.png')"></a>
+									<a href="#primeiro" style="background-image:url('logos/facebookDark.png')"></a>
+									<a href="#primeiro" style="background-image:url('logos/githubDark.png')"></a>
 									<span></span>
 								</div>
 							</div>
@@ -1041,9 +816,9 @@
 						<h1 id="site" class="monoSpace" style="font-size: 34px;">PARCEIROS</h1>
 						<div id="gradeParsa">
 							<section style="background-image: url('logos/mfLogo.png')">Maia's Family</section>
-							<section style="background-image: url('portfolio/logos/bfco.png')">Big Field CO.</section>
-							<section style="background-image: url('portfolio/logos/ZH.png')">Zero Hora</section>
-							<section style="background-image: url('portfolio/logos/wm.png')">WMBeats</section>
+							<section style="background-image: url('logos/bfco.png')">Big Field CO.</section>
+							<section style="background-image: url('logos/ZH.png')">Zero Hora</section>
+							<section style="background-image: url('logos/wm.png')">WMBeats</section>
 						</div>
 					</div>
 				</div>
@@ -1071,7 +846,6 @@
 	<script>
 		altura = window.innerHeight;
 		largura = window.innerWidth;
-			getById("carregando").style.display = "none";
 
 		larguraDoLoader = getById("espacoDoCarregando").offsetWidth;
 		getById("espacoDoCarregando").style.padding = ( ( altura - larguraDoLoader ) / 2 ) + "px " + ( ( largura - larguraDoLoader ) / 2 ) + "px";
@@ -1082,12 +856,11 @@
 			//getById("sobre").style.minHeight = alturaN+"px";
 			getById("equipe").style.minHeight = alturaN+"px";
 			if ( altura < largura ){
-				getById("gradePortif").children[0].style.height = getById("gradePortif").children[0].offsetWidth + "px";
-				getById("gradePortif").children[1].style.height = getById("gradePortif").children[0].offsetWidth + "px";
-				getById("gradePortif").children[2].style.height = getById("gradePortif").children[0].offsetWidth + "px";
-				getById("gradePortif").children[3].style.height = getById("gradePortif").children[0].offsetWidth + "px";
-				getById("gradePortif").children[4].style.height = getById("gradePortif").children[0].offsetWidth + "px";
-				//getById("gradePortif").children[5].style.height = getById("gradePortif").children[0].offsetWidth + "px";
+				getByClass("numero0")[0].style.height = getByClass("numero0")[0].offsetWidth + "px";
+				getByClass("numero1")[0].style.height = getByClass("numero1")[0].offsetWidth + "px";
+				getByClass("numero2")[0].style.height = getByClass("numero2")[0].offsetWidth + "px";
+				getByClass("numero3")[0].style.height = getByClass("numero3")[0].offsetWidth + "px";
+				getByClass("numero4")[0].style.height = getByClass("numero4")[0].offsetWidth + "px";
 			}
 		}
 
@@ -1119,9 +892,10 @@
 		//getById("rodape").style.height = ( altura / 2 )+"px";
 		//getById("comandosBanner").style.paddingTop = ( ( altura / 2 ) - 100).toString().replace(".","").slice(0,3) + "px";
 		//getById("comandosBanner").style.paddingBottom = ( ( altura / 2 ) - 50).toString().replace(".","").slice(0,3) + "px";
-		tamanhosDiv();
 
 		setTimeout(function(){
+			tamanhosDiv();
+			getById("carregando").style.display = "none";
 			//getById("tudo").style.margin = "0% 0%";
 		}, 3000);
 
@@ -1150,7 +924,6 @@
 		exibirProjeto = "";
 		function abrirProjeto(projetoParaAbrir){
 			document.getElementById("projetoAberto").innerHTML = "";
-			//this.preventdefalt();
 			exibirProjeto = trabalhos[projetoParaAbrir][0];
 			tratarConteudo( exibirProjeto.nome, exibirProjeto.artista, exibirProjeto.conteudo );
 			window.scrollTo(0,0);
@@ -1171,6 +944,8 @@
 			btFecha.setAttribute("onclick", "fechar()");
 			btFecha.setAttribute("class", "btFecha");
 			barraTitulo = document.createElement("div");
+			divConteudo = document.createElement("div");
+			divConteudo.id = "divConteudo";
 			barraTitulo.id = "barraTitulo";
 			tituloDoTrabalho = document.createElement("h1");
 			tituloDoTrabalho.innerText = nomeDoProjeto;
@@ -1190,11 +965,11 @@
 					paragrafo = document.createElement("p");
 					paragrafo.innerText = linhaUnica[1];
 					paragrafo.setAttribute("class", "montserrat");
-					document.getElementById("projetoAberto").appendChild(paragrafo);
+					divConteudo.appendChild(paragrafo);
 				} else if( linhaUnica[0] == "img " ){
 					imagem = document.createElement("img");
 					imagem.src = linhaUnica[1];
-					document.getElementById("projetoAberto").appendChild(imagem);
+					divConteudo.appendChild(imagem);
 				} else if( linhaUnica[0] == "youtube " ){
 					youtube = document.createElement("iframe");
 					youtube.src = linhaUnica[1];
@@ -1205,10 +980,20 @@
 					botao.href = linhaUnica[1];
 					botao.text = "VER MAIS";
 					botao.setAttribute("class", "botao");
-					document.getElementById("projetoAberto").appendChild(botao);
+					divConteudo.appendChild(botao);
 				}
 				contaLinhasConteudo++;
 			}
+			
+			document.getElementById("projetoAberto").appendChild(divConteudo);
+		}
+		
+		if (!(!(window.location.href.match("id"))) == true ){
+			itemRecebido = window.location.href.split("id=")[1];
+			exibirProjeto = trabalhos[itemRecebido][0];
+			tratarConteudo( exibirProjeto.nome, exibirProjeto.artista, exibirProjeto.conteudo );
+			document.getElementById("projetoAberto").style.height = altura + "px";
+			getById("projetoAberto").style.minHeight = (altura-50)+"px";
 		}
 
 	</script>
@@ -1224,6 +1009,11 @@
 		
 		window.addEventListener("resize", function(){
 			//getById("indicadoresBanner").style.top = ( altura - 70 )+"px";
+			getByClass("numero0")[0].style.height = getByClass("numero0")[0].offsetWidth + "px";
+			getByClass("numero1")[0].style.height = getByClass("numero1")[0].offsetWidth + "px";
+			getByClass("numero2")[0].style.height = getByClass("numero2")[0].offsetWidth + "px";
+			getByClass("numero3")[0].style.height = getByClass("numero3")[0].offsetWidth + "px";
+			getByClass("numero4")[0].style.height = getByClass("numero4")[0].offsetWidth + "px";
 			getByClass("componenteEquipe")[0].style.height = getByClass("componenteEquipe")[0].offsetWidth + "px";
 			getByClass("componenteEquipe")[1].style.height = getByClass("componenteEquipe")[1].offsetWidth + "px";
 			getByClass("componenteEquipe")[2].style.height = getByClass("componenteEquipe")[2].offsetWidth + "px";
