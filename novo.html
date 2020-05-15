@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Rastro Urbano :: Protfolio</title>
+		<title>Rastro Urbano</title>
+		<link rel="manifest" href="manifest.json">
 		<meta charset="UTF-8">
+		
 		<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+		
 		<link rel="icon" type="image/png" href="https://raw.githubusercontent.com/LuisLimaDev/RastroUrbano/gh-pages/portfolio/logos/rastroRounded.png"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-		<!--
-		<script type="text/javascript" src="portfolio.js"></script>-->
+		<!---->
+		<script type="text/javascript" src="portfolio.js"></script>
 		<style>
 			*{
 				margin: 0px;
@@ -60,7 +63,6 @@
 				background-position: 0% 50%;
 				background-repeat: no-repeat;
 				display: grid;
-				grid-template-columns: 100%;
 			}
 
 			#tudo{
@@ -102,7 +104,7 @@
 				border: 2px solid rgba(255,255,255,0.0);
 			}
 			
-			#lista a:hover, #subMenu a:hover{
+			#lista a:hover{
 				background-color: rgba(255,255,255,0.1);
 				background-size: 90px;
 				border-bottom: 2px solid #E2517E;
@@ -118,55 +120,306 @@
 				display: grid;
 				grid-template-columns: 33% 33% 33%;
 			}
-			
-			div#projetoAberto #btFecha{ 
+
+			/** configurações do Banner **/
+			div .divisor div.camposDeTexto a, div .divisor div.camposDeTexto span{
 				color: white;
-				text-decoration: none;
-				font-size: 25pt;
-				line-height: 80px;
-				background-color: red;
-				text-align: center;
-			}
-
-			#projetoAberto{
-				padding: 0px;
-				margin: 0px;
-			}
-
-			div#projetoAberto{
-				transition: 1s all ease;
-				width: 100%;
-				animation-name: darZoom;
-				animation-duration: 1s;
-				position: fixed;
-				top: 50px;
 				display: block;
-				background-color: rgba(0,0,0,0.9);
-				color: white;
-				overflow-y: scroll;
 			}
 			
-			#projetoAberto iframe{
-				height: 480px;
-				border: 0px solid;
+			.divisor div.camposDeTexto .pequeno{
+				font-size: 14pt;
+			}
+			
+			.divisor div.camposDeTexto .grande{
+				font-size: 60pt;
+				font-weight: 600;
+				line-height: 60px;
 			}
 
-			#projetoAberto img, #projetoAberto iframe{
+			div .divisor div.camposDeTexto:hover {
+				
+			}
+
+			div .divisor .camposDeTexto{
+				margin-left: 55%;
+				//width: 300px;
+				transition: 0.3s all esae;
+				//background-color: white;
+				//mix-blend-mode: screen;
+				//color: black;
+			}
+
+			div .divisor {
+				position: absolute;
+				top: 0px;
 				width: 100%;
+				//left: -301%;
+				background-size: cover;
+				//background-repeat: no-repeat;
+				background-position: 50%;
 			}
 			
-			div#divConteudo{
-				padding: 100px 0px;
+			#comandosBanner a{
+				//background-color: rgba(200,200,200,0.9);
+				color: #fff;
+				font-size: 14pt;
 			}
 
 			.montserrat{
 				font-family: 'Montserrat', sans-serif;
 			}
 
+			.monoSpace{
+				//font-family: 'Rheiborn';
+				//letter-spacing: -2px;
+				src: url('rheiborn.otf')
+			}
+			
+			#atalhoContato #fotos div:hover a{
+				display: block;
+				margin: 0px 0px 0px 20px;
+				position: absolute;
+				right: 20px;
+				width: 245px;
+				color: #ffffff;
+				background-color: #000000;
+				margin: 5px 0px;
+				//line-height: 3px;
+				border-radius: 22px;
+				padding: 5px 20px;
+				background-size: 45px;
+				background-repeat: no-repeat;
+				background-position: right;
+			}
+			
+			#atalhoContato:hover span{
+				position: absolute;
+				right: 50px;
+				display: block;
+				background-color: #ffffff;
+			}
+
+			#atalhoContato #fotos div:hover{
+				//transform: scale(1.5);
+				//width: 245px;
+			}
+
+			#atalhoContato #fotos div section{
+				background-position: 50%;
+				background-size: cover;
+				width: 45px;
+				background-size: cover;
+				background-position: 50%;
+				height: 45px;
+				border-radius: 50%;
+				margin: 5px 0px;
+			}
+			
+			#atalhoContato #fotos div a h5, #atalhoContato #fotos div a h6, #atalhoContato span {
+				font-size: 8pt;
+				width: 120px;
+			}
+
+			#atalhoContato section{
+				font-size: 14pt;
+				right: 10px;
+				top: 60px;
+				line-height: 45px;
+				border-radius: 50%;
+				color: #fff;
+				background-color: #000000;
+				text-align: center;
+				width: 45px;
+				//border: 2px solid #aaa;
+			}
+
+			#atalhoContato:hover div#fotos{
+				display: block;
+			}
+			
+			div#fotos div {
+				display: grid;
+				grid-template-columns: 70% 20%;
+			}
+
+			#atalhoContato:hover span{ display: block}
+			#atalhoContato:hover section{
+				background-color: #fff;
+				color: #000;
+				//border: 2px solid #000;
+			}
+
+			#atalhoContato{
+				position: fixed;
+				top: 60px;
+				right: 20px;
+				padding: 0px 20px;
+			}
+			
+			h1 .monoSpace{
+				font-size: 60pt;
+			}
+			
 			@font-face{
 				font-family: 'Rheiborn';
 				src: url('rheiborn.otf')
 			}
+			
+			div #aId h1{
+				font-size: 70pt;
+				line-height: 100px;
+				//transform: scale(2.0);
+			}
+
+			#aId{
+				font-size: 34pt;
+				color: #fff;
+				padding: 0px 10px 0px 60%;
+			}
+			
+			#indicadoresBanner{
+				display: grid;
+				grid-template-columns: 20px 20px 20px;
+				grid-gap: 15px;
+				width: 20px;
+				height: 20px;
+				position: absolute;
+				right: 10%;
+			}
+
+			#indicadoresBanner section:hover{
+				background-color: rgba(100,100,100,0.5);
+				color: rgba(255,255,255,1.0);
+			}
+
+			#indicadoresBanner section{
+				background-color: rgba(255,255,255,0.3);
+				text-align: center;
+				padding: 10px 0px;
+				margin: 5px 0px;
+				border-radius: 50%;
+				color: rgba(255,255,255,0.0);
+			}
+			
+			#apresentacao{ overflow: none }
+			
+			#apresentacao .play-animation .banner1 {
+			animation: 12s linear 0s infinite normal forwards running primeira;
+			}
+			#apresentacao .play-animation .banner2 {
+			animation: 12s linear 0s infinite normal forwards running segunda;
+			}
+			#apresentacao .play-animation .banner3 {
+			animation: 12s linear 0s infinite normal forwards running terceira;
+			}
+			div.divisor .camposDeTexto {
+				animation: 12s linear 0s infinite normal forwards running animTextoBanner;
+			}
+			@keyframes animTextoBanner {
+				0%{ opacity: 0; }
+				3%{ opacity: 1; }
+				27%{ opacity: 1; }
+				30%{ opacity: 0; }
+				36%{ opacity: 0; }
+				39%{ opacity: 1; }
+				60%{ opacity: 1; }
+				63%{ opacity: 0; }
+				69%{ opacity: 0; }
+				72%{ opacity: 1; }
+				97%{ opacity: 1; }
+				99%{ opacity: 0; }
+				100%{ opacity: 0; }
+			}
+
+			@keyframes primeira {
+				0% {
+					opacity: 1;
+					//background-position-x: 0%
+					left: 0%;
+				}
+				30% {
+					opacity: 1;
+					left: 0%;
+				}
+				33% {
+					opacity: 0;
+					//background-position-x: 5%;
+					left: 100%;
+				}
+				40%{ 
+					background-position-x: 0%;
+					left: -100%;
+				}
+				97%{
+				opacity: 0;
+					left: -100%;
+				}
+				100%{
+					opacity: 1;
+					left: 0%;
+				}
+			}
+			@keyframes segunda {
+				0% {
+					opacity: 0;
+					left: -100%;
+				}
+				30% {
+					opacity: 0;
+					//background-position-x: 50%;
+					left: -100%;
+				}
+				33% {
+					opacity: 1;
+					left: 0%;
+				}
+				63% {
+					opacity: 1; 
+					left: 0%;
+				}
+				66% {
+					opacity: 0;
+					background-position-x: 40%;
+					left: 100%;
+				}
+				67% {
+					left: -100%;
+				}
+				100%{
+					opacity: 0;
+					left: 100%;
+				}
+			}
+			@keyframes terceira {
+				0% {
+					opacity: 0;
+					left: -100%;
+				}
+				63% {
+					opacity: 0;
+					left: -100%;
+				}
+				66% {
+					opacity: 1; 
+					left: 0%;
+				}
+				97% {
+					opacity: 1;
+					background-position-x: 50%;
+					left: 0%;
+				}
+				100%{
+					background-position-x: 40%;
+					opacity: 0;
+					left: 100%;
+				}
+			}
+			.gen-qbhagwdanimation {
+				//left: -300%;
+			}
+
+
 			
 			a.botao:hover, input.botao:hover{
 				border: 1px solid rgba(0,0,0,0.3);
@@ -190,7 +443,7 @@
 			}
 
 			div.divisor a.btBanner{
-				width: 150px;
+				width: 120px;
 				text-align: center;
 				transition: 0.3s all ease;
 				border: 3px solid #fff;
@@ -205,36 +458,39 @@
 				border: 1px solid #444;
 				margin: 10px 0px;
 			}
+			
+			#sobre, #portfolio, #equipe, #videos{
+				padding: 20px 0px;
+			}
+			
+			#sobre .cartao{
+				color: #fff;
+				max-width: 1000px;
+				width: 60%;
+				margin: 15% 10%;
+				min-width: 300px;
+			}
+			#sobre section.botaoSobre{
+				margin: 5% 0%;
+			}
+
+			#sobre{
+				color: #fff;
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-image: url('https://raw.githubusercontent.com/LuisLimaDev/RastroUrbano/gh-pages/portfolio/images/bg.png');
+			}
 
 			.cartao h1{
 				margin-bottom: 25px;
 			}
 
 			.cartao{
-				width: 100%;
-				padding: 100px 0px;
+				width: 90%;
+				margin: 5% 5% 3% 5%;
+				//padding: 5% 0px 0px 0px;
+				top: 120px;
 				border-radius: 5px;
-				background-attachment: fixed;
-				background-size: cover;
-				background-repeat: no-repeat;
-				background-position: 50%;
-			}
-			
-			div#subMenu{
-				border: solid #aaaaaa;
-				border-width: 0px 0px 1px 0px;
-				padding: 0px 130px;
-			}
-			
-			div#subMenu a{
-				line-height: 50px;
-				color: white;
-				text-decoration: none;
-				font-family: monospace;
-				font-size: 15pt;
-				border: solid #4EB191;
-				border-width: 0px 0px 3px 0px;
-				padding: 10px;
 			}
 
 			#portfolio, #videos, #blog, #contatos, #final, #rodape, #infos{
@@ -245,11 +501,6 @@
 			#parceiros{
 				background-color: #191919;
 			}
-			
-			#portfolio .cartao #tituloDaPagina h1{
-				font-size: 60pt;
-				text-align: center
-			}
 
 			a.miniaturas h5, a.miniaturas h6 {
 				padding: 20px 10px 0px 10px;
@@ -259,8 +510,8 @@
 			#gradePortif{
 				width: 100%;
 				display: grid;
-				grid-template-columns: 33% 33% 33%;
-				padding: 50px 0px;
+				grid-template-columns: 20% 20% 20% 20% 20%;
+				margin: 0px 0px 50px 0px;
 			}
 			
 			#gradePortif .botao{
@@ -286,18 +537,6 @@
 				background-position: 50%;
 			}
 
-			div#barraTitulo h3{
-			}
-
-			div#barraTitulo{
-				display: grid;
-				grid-template-columns: 80% 80px;
-				justify-content: space-between;
-				position: fixed;
-				width: 100%;
-				background: #1c1c1c;
-			}
-
 			#divEquipe{
 				display: grid;
 				grid-template-columns: 33.3% 33.3% 33.3%;
@@ -305,18 +544,6 @@
 				text-align: center;
 				padding: 0px 20%;
 				grid-gap: 5%;
-			}
-			
-			section.fotoBruno, a.fotoBruno{
-				
-			}
-			
-			section.fotoPaulo, a.fotoPaulo{
-				
-			}
-			
-			section.fotoLuis, a .fotoLuis{
-				
 			}
 
 			#divEquipe .componenteEquipe{
@@ -339,7 +566,7 @@
 			#divEquipe h5{ font-weight: 600 }
 			
 			#divEquipe .sociais a:hover{
-				transform: scale(1.1);
+				transform: scale(1.1)
 			}
 
 			#divEquipe a.botao{
@@ -352,6 +579,10 @@
 			}
 
 			#divEquipe .sociais{
+				display: grid;
+			}
+
+			#divEquipe div.sociais{
 				height: 50px;
 				//filter: invert(1);
 				grid-template-columns: 25% 25% 25% 25%;
@@ -361,7 +592,7 @@
 			}
 			
 			#gradeVid a:hover{
-				background-color: #888;
+				transform: scale(1.1);
 			}
 
 			#gradeVid a{
@@ -393,6 +624,14 @@
 				display: grid;
 				grid-template-columns: 58% 40%;
 				grid-gap: 2%;
+			}
+
+			.fonteGrande{
+				font-size: 60pt;
+				width: 40%;
+				margin: 0% 30%;
+				background: white;
+				color: #222222;
 			}
 
 			.sombraLeve{
@@ -512,11 +751,6 @@
 				#individuais{
 					font-size: 12pt
 				}
-
-				#tituloDaPagina h1{
-					font-size: 40pt;
-					text-align: center
-				}
 			
 			}
 
@@ -533,6 +767,10 @@
 					height: 80px;
 					width: 60%;
 					margin: 0% 20%;
+				}
+				
+				div .divisor .camposDeTexto{
+					margin-left: 30%;
 				}
 
 				#gradePortif {
@@ -632,7 +870,7 @@
 			}
 
 			#espacoDoCarregando{
-				position: fixed;
+				position: absolute;
 				top: 0px;
 				background-color: #1c1c1c;
 				//background-color: rgba(255,255,255,0.7);
@@ -674,7 +912,44 @@
 	<body class="tagCorpo" id="tagCorpo">
 		<div class="apresentacao" id="apresentacao">
 
-
+			<div class="play-animation">
+				<div class="divisor banner1" style="background-image: url('https://raw.githubusercontent.com/LuisLimaDev/RastroUrbano/gh-pages/portfolio/media/capa.nyak.naoDeixeORioLevar/nyak.png')">
+				  
+					<div class="camposDeTexto">
+						
+						<span class="grande">NYAK</span>
+						<br>
+						<span class="pequeno">NÃO DEIXE O RIO LEVAR</span>
+						<br>
+						<a href="portfolio/#projetoAberto?id=2" class="btBanner">VER MAIS</a>
+						
+					</div>
+				</div>
+				
+				<div class="divisor banner2" style="background-image: url('https://raw.githubusercontent.com/LuisLimaDev/RastroUrbano/gh-pages/portfolio/media/ep.gh.2020/capaGh2020.png')">
+				  
+					<div class="camposDeTexto">
+					
+						<span class="pequeno">EP - GH</span>
+						<br>
+						<span class="grande">2020</span>
+						<br>
+						<a href="portfolio/#projetoAberto?id=4" class="btBanner">VER MAIS</a>
+						
+					</div>
+				</div>
+				<div class="divisor banner3" style="background-image: url('https://raw.githubusercontent.com/LuisLimaDev/RastroUrbano/gh-pages/portfolio/media/premioRUA/bannerPremioRua.png')">
+				  
+					<div class="camposDeTexto">
+						
+						<span class="pequeno">PRÊMIO</span><br>
+						<span class="grande">R.U.A.</span>
+						<br>
+						<a href="portfolio/#projetoAberto?id=1" class="btBanner">VER MAIS</a>
+						
+					</div>
+				</div>
+			  </div>
 
 			<header>
 			
@@ -684,12 +959,12 @@
 					</div><a href="#menuBlock" style="" id="abrirMenu" class="escondido">&#9776;</a>
 
 					<div id="lista" class="monoSpace menuItens">
-						<a href="http://luislimadev.github.io/RastroUrbano">HOME</a>
-						<a href="http://localhost/rastro#sobre">SOBRE</a>
-						<a href="#portfolio" style="border-color: rgba(0,0,0,0.0) rgba(0,0,0,0.0)#4EB191 rgba(0,0,0,0.0) ">PORTFOLIO</a>
+						<a href="#apresentacao">HOME</a>
+						<a href="#sobre">SOBRE</a>
+						<a href="#portfolio">PORTFOLIO</a>
 						<a href="#equipe">EQUIPE</a>
 						<a href="#videos">BLOG</a>
-						<a href="http://localhost/rastro#final">CONTATO</a>
+						<a href="#final">CONTATO</a>
 					</div>
 
 					<div id="" class="sociais">
@@ -702,15 +977,14 @@
 				</div>
 				<div id="menuBlock" class="escondido monoSpace">
 
-					<section><a href="http://luislimadev.github.io/RastroUrbano">HOME</a>
+					<section><a href="#apresentacao">HOME</a>
 						<a href="#fecha" style="text-align: center">&times;</a><!--<a href="#fecha" class="escondido botao" id="btFecha">&times;</a>-->
 						</section>
-					<a href="http://localhost/rastro#sobre">SOBRE</a>
-					<a href="#portfolio" style="border-color: rgba(0,0,0,0.0) rgba(0,0,0,0.0)#4EB191 rgba(0,0,0,0.0) ">PORTFOLIO</a>
+					<a href="#sobre">SOBRE</a>
+					<a href="#portfolio">PORTFOLIO</a>
 					<a href="#equipe">EQUIPE</a>
 					<a href="#videos">BLOG</a>
-					<a href="http://localhost/rastro#final">CONTATO</a>
-
+					<a href="#final">CONTATO</a>
 					<div id="" class="sociais">
 						<a href="#primeiro" style="background-image:url('https://raw.githubusercontent.com/LuisLimaDev/RastroUrbano/gh-pages/portfolio/logos/fblogo.png')"></a>
 						<a href="#primeiro" style="background-image:url('https://raw.githubusercontent.com/LuisLimaDev/RastroUrbano/gh-pages/portfolio/logos/instalogo.png')"></a>
@@ -726,21 +1000,38 @@
 
 			
 			<div id="corpo">
+				<div id="sobre">
+					<div class="cartao" style="width: 50%; min-width: 260px" id="sobreDivTexto">
+					<div>
+						<h1 class="monoSpace" style="font-size: 42px">SOMOS UMA AGÊNCIA</h1>
+						<hr/>
+						<p class="montserrat">
+							A Rastro Urbano é uma agência de design e fotografia formada por ex-músicos, que notaram 
+							através da sua trajetória musical a importância de trabalhos visuais e conexões entre pessoas 
+							nesse meio.
+						</p>
+						<p class="montserrat">
+							Por isso, a Rastro é uma agência de músicos para músicos, tendo como foco os 
+							gêneros rap, reggae e rock, que muitas vezes compartilham dos mesmo ambientes, influen
+							ciando uns aos outros direta ou indiretamente.
+						</p>
+						
+						<section class="botaoSobre">
+						<a href="#final" class="botao iconeEmail montserrat">ENTRE EM CONTATO</a>
+						</section>
+					</div>
+					</div>
+				</div>
 
 				<div id="portfolio">
-					<div id="projetoAberto" class=""></div>
-					<div class="cartao" style="background-image: url('https://raw.githubusercontent.com/LuisLimaDev/RastroUrbano/gh-pages/portfolio/images/bg.png')">
-					<h1 class="monoSpace" style="" id="tituloDaPagina">PORTFOLIO</h1>
+					<div class="cartao">
+					<h1 class="monoSpace" style="font-size: 42px; text-align: center">PORTFOLIO</h1>
 					<hr/>
-					<p class="montserrat" style="text-align: center; display: none">Nossa equipe é formada por profissionais com diferentes especialidades,<br/>
-					cada um colaborando para o melhor resultado nos projetos.</p>
-					</div>
-					<div id="subMenu">
-						<a href="#" class="montserrat">PROJETOS</a>
-						<a href="#" class="montserrat" style="border-color: #222222">VIDEOS</a>
+					<p class="montserrat" style="text-align: center">Conheça alguns de nossos trampos.</p>
 					</div>
 					<div id="gradePortif" class="montserrat">
 					</div>
+					<div style="text-align: center"><a href="portfolio/" class="botao montserrat">VEJA MAIS</a></div>
 				</div>
 
 				<div id="equipe">
@@ -749,48 +1040,76 @@
 						<p class="montserrat" style="text-align:center">Nossa equipe é formada por profissionais com diferentes especialidades,<br>
 						cada um colaborando para o melhor resultado nos projetos.</p>
 					</div>
-					<div id="divEquipe">
-						<div>
-							<section class="componenteEquipe" style="background-image: url('https://raw.githubusercontent.com/LuisLimaDev/RastroUrbano/gh-pages/portfolio/images/brunoMoura.png')" class="fotoBruno">
-								
-							</section>
-							<p class="montserrat"><b>BRUNO MOURA</b></p>
-							<p class="montserrat">Diretor de Fotografia</p>
-							<div class="sociais bruno">
-								<span></span>
-								<a href="#primeiro" style="background-image:url('https://raw.githubusercontent.com/LuisLimaDev/RastroUrbano/gh-pages/portfolio/logos/instagramDark.png')"></a>
-								<a href="#primeiro" style="background-image:url('https://raw.githubusercontent.com/LuisLimaDev/RastroUrbano/gh-pages/portfolio/logos/flickrDark.png')"></a>
-								<span></span>
+						<div id="divEquipe">
+							<div>
+								<section class="componenteEquipe" style="background-image: url('https://raw.githubusercontent.com/LuisLimaDev/RastroUrbano/gh-pages/portfolio/images/brunoMoura.png')" class="fotoBruno">
+									
+								</section>
+								<p class="montserrat"><b>BRUNO MOURA</b></p>
+								<p class="montserrat">Diretor de Fotografia</p>
+								<div class="sociais bruno">
+									<span></span>
+									<a href="#primeiro" style="background-image:url('https://raw.githubusercontent.com/LuisLimaDev/RastroUrbano/gh-pages/portfolio/logos/instagramDark.png')"></a>
+									<a href="#primeiro" style="background-image:url('https://raw.githubusercontent.com/LuisLimaDev/RastroUrbano/gh-pages/portfolio/logos/flickrDark.png')"></a>
+									<span></span>
+								</div>
+							</div>
+							<div>
+								<section class="componenteEquipe" style="background-image: url('https://raw.githubusercontent.com/LuisLimaDev/RastroUrbano/gh-pages/portfolio/images/pauloGomes.png')" class="fotoPaulo">
+									
+								</section>
+								<p class="montserrat"><b>PAULO GOMES</b></p>
+								<p class="montserrat">Diretor de Arte</p>
+								<div class="sociais paulo">
+									<span></span>
+									<a href="https://instagram.com/aec.paulo" style="background-image:url('https://raw.githubusercontent.com/LuisLimaDev/RastroUrbano/gh-pages/portfolio/logos/instagramDark.png')"></a>
+									<a href="https://www.behance.net/aec-paulo" style="background-image:url('https://raw.githubusercontent.com/LuisLimaDev/RastroUrbano/gh-pages/portfolio/logos/behancepreto.png')"></a>
+									<span></span>
+								</div>
+							</div>
+							<div>
+								<section class="componenteEquipe" style="background-image: url('https://raw.githubusercontent.com/LuisLimaDev/RastroUrbano/gh-pages/portfolio/images/luisLima.png')" class="fotoLuis">
+									
+								</section>
+								<p class="montserrat"><b> LUIS LIMA</b></p>
+								<p class="montserrat">Desenvolvedor Web</p>
+								<div class="sociais luis">
+									<span></span>
+									<a href="#primeiro" style="background-image:url('https://raw.githubusercontent.com/LuisLimaDev/RastroUrbano/gh-pages/portfolio/logos/facebookDark.png')"></a>
+									<a href="https://github.com/luislimadev" style="background-image:url('https://raw.githubusercontent.com/LuisLimaDev/RastroUrbano/gh-pages/portfolio/logos/githubDark.png')"></a>
+									<span></span>
+								</div>
 							</div>
 						</div>
-						<div>
-							<section class="componenteEquipe" style="background-image: url('https://raw.githubusercontent.com/LuisLimaDev/RastroUrbano/gh-pages/portfolio/images/pauloGomes.png')" class="fotoPaulo">
-								
-							</section>
-							<p class="montserrat"><b>PAULO GOMES</b></p>
-							<p class="montserrat">Diretor de Arte</p>
-							<div class="sociais paulo">
-								<span></span>
-								<a href="https://instagram.com/aec.paulo" style="background-image:url('https://raw.githubusercontent.com/LuisLimaDev/RastroUrbano/gh-pages/portfolio/logos/instagramDark.png')"></a>
-								<a href="https://www.behance.net/aec-paulo" style="background-image:url('https://raw.githubusercontent.com/LuisLimaDev/RastroUrbano/gh-pages/portfolio/logos/behancepreto.png')"></a>
-								<span></span>
-							</div>
+				</div>
+
+				<div id="videos"><!--
+					<div class="cartao">
+					<h1 class="monoSpace" style="font-size: 42px;">VIDEOS RECENTES</h1>
+					<hr/>
+					<p class="montserrat">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
+tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis.</p>
+					</div>
+					<div id="displayVideos" class="cartao">
+						<div id="iframe">
+							<iframe id="saidaVideo" src="https://www.youtube.com/embed/hhB-X2SZmHo" name="videoFrame"></iframe>
 						</div>
-						<div>
-							<section class="componenteEquipe" style="background-image: url('https://raw.githubusercontent.com/LuisLimaDev/RastroUrbano/gh-pages/portfolio/images/luisLima.png')" class="fotoLuis">
-								
-							</section>
-							<p class="montserrat"><b> LUIS LIMA</b></p>
-							<p class="montserrat">Desenvolvedor Web</p>
-							<div class="sociais luis">
-								<span></span>
-								<a href="#primeiro" style="background-image:url('https://raw.githubusercontent.com/LuisLimaDev/RastroUrbano/gh-pages/portfolio/logos/facebookDark.png')"></a>
-								<a href="https://github.com/luislimadev" style="background-image:url('https://raw.githubusercontent.com/LuisLimaDev/RastroUrbano/gh-pages/portfolio/logos/githubDark.png')"></a>
-								<span></span>
-							</div>
+						<div id="gradeVid" class="montserrat">
+						</div>
+					</div>-->
+
+					<div id="blog">
+						<div class="cartao">
+						<h1 class="monoSpace" style="font-size: 42px;">BLOG</h1>
+						<hr/>
+						<p class="fonteGrande">MA</p>
+						<p class="fonteGrande">NU</p>
+						<p class="fonteGrande">TEN</p>
+						<p class="fonteGrande">ÇÃO</p>
 						</div>
 					</div>
 				</div>
+				
 
 				<div id="final" style="">
 					<div id="contatoForm" class=" ">
@@ -854,8 +1173,50 @@
 		
 	</body>
 	<script>
+		altura = window.innerHeight;
+		largura = window.innerWidth;
 
-// portifolio.js
+		larguraDoLoader = getById("espacoDoCarregando").offsetWidth;
+		getById("espacoDoCarregando").style.padding = ( ( altura - larguraDoLoader ) / 2 ) + "px " + ( ( largura - larguraDoLoader ) / 2 ) + "px";
+		
+		getById("menuBar").children[3].children[0].href = "https://www.facebook.com/rastrourbano.oficial/"; //facebook
+		getById("menuBar").children[3].children[1].href = "https://instagram.com/rastrourbano?igshid=1c1rbj7jgkhu8"; //instagram
+		getById("menuBar").children[3].children[2].href = ""; //youtube
+		getById("sociaisFim").children[0].href = "https://www.facebook.com/rastrourbano.oficial/"; //facebook
+		getById("sociaisFim").children[1].href = "https://instagram.com/rastrourbano?igshid=1c1rbj7jgkhu8"; //instagram
+		getById("sociaisFim").children[2].href = ""; //youtube
+
+		function tamanhosDiv(){
+			alturaN = window.innerHeight - 50;
+			//getById("sobre").style.minHeight = alturaN+"px";
+			//getById("sobre").style.minHeight = alturaN+"px";
+			getById("sobreDivTexto").children[0].style.paddingTop = ( altura - getById("sobre").children[0].offsetHeight) + "px 0px";
+			getById("portfolio").style.minHeight = alturaN+"px";
+			getById("equipe").style.minHeight = alturaN+"px";
+			getById("videos").style.minHeight = alturaN+"px";
+			getById("blog").style.minHeight = alturaN+"px";
+			//getById("final").style.minHeight = alturaN+"px";
+			if ( altura < largura ){
+				getById("gradePortif").children[0].style.height = getById("gradePortif").children[0].offsetWidth + "px";
+				getById("gradePortif").children[1].style.height = getById("gradePortif").children[0].offsetWidth + "px";
+				getById("gradePortif").children[2].style.height = getById("gradePortif").children[0].offsetWidth + "px";
+				getById("gradePortif").children[3].style.height = getById("gradePortif").children[0].offsetWidth + "px";
+				getById("gradePortif").children[4].style.height = getById("gradePortif").children[0].offsetWidth + "px";
+			}
+		}
+
+
+		getByClass("componenteEquipe")[0].style.height = getByClass("componenteEquipe")[0].offsetWidth + "px";
+		getByClass("componenteEquipe")[1].style.height = getByClass("componenteEquipe")[1].offsetWidth + "px";
+		getByClass("componenteEquipe")[2].style.height = getByClass("componenteEquipe")[2].offsetWidth + "px";
+		getById("gradeParsa").children[0].style.height = getById("gradeParsa").children[0].offsetWidth + "px";
+		getById("gradeParsa").children[1].style.height = getById("gradeParsa").children[0].offsetWidth + "px";
+		getById("gradeParsa").children[2].style.height = getById("gradeParsa").children[0].offsetWidth + "px";
+		getById("gradeParsa").children[3].style.height = getById("gradeParsa").children[0].offsetWidth + "px";
+
+
+		numtrab = 0;
+		
 		{
 			trabalhos = [
 				[{
@@ -900,53 +1261,12 @@
 				}]
 			]
 		}
-
-
-		altura = window.innerHeight;
-		largura = window.innerWidth;
-
-		larguraDoLoader = getById("espacoDoCarregando").offsetWidth;
-		getById("espacoDoCarregando").style.padding = ( ( altura - larguraDoLoader ) / 2 ) + "px " + ( ( largura - larguraDoLoader ) / 2 ) + "px";
-		
-		getById("menuBar").children[3].children[0].href = "https://www.facebook.com/rastrourbano.oficial/"; //facebook
-		getById("menuBar").children[3].children[1].href = "https://instagram.com/rastrourbano?igshid=1c1rbj7jgkhu8"; //instagram
-		getById("menuBar").children[3].children[2].href = ""; //youtube
-		getById("sociaisFim").children[0].href = "https://www.facebook.com/rastrourbano.oficial/"; //facebook
-		getById("sociaisFim").children[1].href = "https://instagram.com/rastrourbano?igshid=1c1rbj7jgkhu8"; //instagram
-		getById("sociaisFim").children[2].href = ""; //youtube
-
-
-		function tamanhosDiv(){
-			alturaN = window.innerHeight - 50;
-			//getById("sobre").style.minHeight = alturaN+"px";
-			//getById("sobre").style.minHeight = alturaN+"px";
-			getById("equipe").style.minHeight = alturaN+"px";
-			if ( altura < largura ){
-				getByClass("numero0")[0].style.height = getByClass("numero0")[0].offsetWidth + "px";
-				getByClass("numero1")[0].style.height = getByClass("numero1")[0].offsetWidth + "px";
-				getByClass("numero2")[0].style.height = getByClass("numero2")[0].offsetWidth + "px";
-				getByClass("numero3")[0].style.height = getByClass("numero3")[0].offsetWidth + "px";
-				getByClass("numero4")[0].style.height = getByClass("numero4")[0].offsetWidth + "px";
-			}
-		}
-
-
-		getByClass("componenteEquipe")[0].style.height = getByClass("componenteEquipe")[0].offsetWidth + "px";
-		getByClass("componenteEquipe")[1].style.height = getByClass("componenteEquipe")[1].offsetWidth + "px";
-		getByClass("componenteEquipe")[2].style.height = getByClass("componenteEquipe")[2].offsetWidth + "px";
-		getById("gradeParsa").children[0].style.height = getById("gradeParsa").children[0].offsetWidth + "px";
-		getById("gradeParsa").children[1].style.height = getById("gradeParsa").children[0].offsetWidth + "px";
-		getById("gradeParsa").children[2].style.height = getById("gradeParsa").children[0].offsetWidth + "px";
-		getById("gradeParsa").children[3].style.height = getById("gradeParsa").children[0].offsetWidth + "px";
-
-
-		numtrab = 0;
 		
 		while( trabalhos.length > numtrab ){
 			link = document.createElement("a");
-			link.href = "#projetoAberto?id=" + numtrab;
+			link.href = "portfolio/index.html#projetoAberto?id=" + numtrab;
 			link.innerHTML = "<h5>" + trabalhos[numtrab][0].nome + "</h5><h6>" + trabalhos[numtrab][0].artista + "</h6>";
-			link.setAttribute("onclick", "abrirProjeto(" + numtrab + ")" )
+			//link.target = "_blank";
 			link.setAttribute( "class", "miniaturas numero" + numtrab );
 			link.style.backgroundImage = "url('" + trabalhos[numtrab][0].capa +"')";
 			//divisor.appendChild( link );
@@ -954,13 +1274,26 @@
 			//console.log(link);
 			numtrab++;
 		}
+
+		
+		getByClass("numero0")[0].style.height = getByClass("numero0")[0].offsetWidth + "px";
+		getByClass("numero1")[0].style.height = getByClass("numero1")[0].offsetWidth + "px";
+		getByClass("numero2")[0].style.height = getByClass("numero2")[0].offsetWidth + "px";
+		getByClass("numero3")[0].style.height = getByClass("numero3")[0].offsetWidth + "px";
+		getByClass("numero4")[0].style.height = getByClass("numero4")[0].offsetWidth + "px";
+
+		espacoDeSobra = ( altura - getByClass("camposDeTexto")[0].offsetHeight );
+		getByClass("divisor")[0].style.padding = (espacoDeSobra / 2) +"px 0px";
+		getByClass("divisor")[1].style.padding = (espacoDeSobra / 2) +"px 0px";
+		getByClass("divisor")[2].style.padding = (espacoDeSobra / 2) +"px 0px";
+		getById("tudo").style.paddingTop = getByClass("divisor")[0].offsetHeight +"px";
 		//getById("indicadoresBanner").style.top = ( altura - 70 ) +"px";
 		//getById("rodape").style.height = ( altura / 2 )+"px";
 		//getById("comandosBanner").style.paddingTop = ( ( altura / 2 ) - 100).toString().replace(".","").slice(0,3) + "px";
 		//getById("comandosBanner").style.paddingBottom = ( ( altura / 2 ) - 50).toString().replace(".","").slice(0,3) + "px";
+		tamanhosDiv();
 
 		setTimeout(function(){
-			tamanhosDiv();
 			getById("carregando").style.display = "none";
 			//getById("tudo").style.margin = "0% 0%";
 		}, 3000);
@@ -979,90 +1312,11 @@
 			//console.log(link);
 			numVid++;
 			tamanhoFrame();
-		}
+		}**/
 		
 		function tamanhoFrame(){
 			getById("gradeVid").style.height = ( getById("gradeVid").children[0].offsetHeight * 4 ) + "px";
 			getById("saidaVideo").style.height = ( getById("gradeVid").children[0].offsetHeight * 4 ) + "px";
-		}
-**/
-
-		exibirProjeto = "";
-		function abrirProjeto(projetoParaAbrir){
-			document.getElementById("projetoAberto").innerHTML = "";
-			exibirProjeto = trabalhos[projetoParaAbrir][0];
-			tratarConteudo( exibirProjeto.nome, exibirProjeto.artista, exibirProjeto.conteudo );
-			window.scrollTo(0,0);
-			document.getElementById("projetoAberto").style.height = altura + "px";
-			getById("projetoAberto").style.minHeight = (altura-50)+"px";
-		}
-		
-		function fechar(){
-			document.getElementById("projetoAberto").innerHTML = "";
-			getById("projetoAberto").style.minHeight = "0px";
-			getById("projetoAberto").style.height = "0px";
-		}
-
-		function tratarConteudo( nomeDoProjeto, cliente, conteudoMesclado ){
-			btFecha = document.createElement("a");
-			btFecha.innerHTML = "&times;";
-			btFecha.href = "#fechar";
-			btFecha.id = "btFecha";
-			btFecha.setAttribute("onclick", "fechar()");
-			btFecha.setAttribute("class", "btFecha");
-			barraTitulos = document.createElement("div");
-			barraTitulo = document.createElement("div");
-			divConteudo = document.createElement("div");
-			divConteudo.id = "divConteudo";
-			barraTitulo.id = "barraTitulo";
-			tituloDoTrabalho = document.createElement("h1");
-			tituloDoTrabalho.innerText = nomeDoProjeto;
-			nomeDoCliente = document.createElement("h3");
-			nomeDoCliente.innerText = cliente;
-			barraTitulos.appendChild( tituloDoTrabalho );
-			barraTitulos.appendChild( nomeDoCliente );
-			barraTitulo.appendChild( barraTitulos );
-			barraTitulo.appendChild( btFecha );
-			document.getElementById("projetoAberto").appendChild(barraTitulo);
-			contaLinhasConteudo = 0;
-			linhasSeparadas = conteudoMesclado.split(";");
-			quantidadeDeItens = linhasSeparadas.length;
-			itensHTML = "";
-			while( contaLinhasConteudo < quantidadeDeItens ){
-				linhaUnica = linhasSeparadas[contaLinhasConteudo].split("=");
-				if( linhaUnica[0] == "p " ){
-					paragrafo = document.createElement("p");
-					paragrafo.innerText = linhaUnica[1];
-					paragrafo.setAttribute("class", "montserrat");
-					divConteudo.appendChild(paragrafo);
-				} else if( linhaUnica[0] == "img " ){
-					imagem = document.createElement("img");
-					imagem.src = linhaUnica[1];
-					divConteudo.appendChild(imagem);
-				} else if( linhaUnica[0] == "youtube " ){
-					youtube = document.createElement("iframe");
-					youtube.src = linhaUnica[1];
-					youtube.setAttribute("X-Frames-Options", "same-origin");
-					divConteudo.appendChild(youtube);
-				} else if( linhaUnica[0] == "a.botao " ){
-					botao = document.createElement("a");
-					botao.href = linhaUnica[1];
-					botao.text = "VER MAIS";
-					botao.setAttribute("class", "botao");
-					divConteudo.appendChild(botao);
-				}
-				contaLinhasConteudo++;
-			}
-			
-			document.getElementById("projetoAberto").appendChild(divConteudo);
-		}
-		
-		if (!(!(window.location.href.match("id"))) == true ){
-			itemRecebido = window.location.href.split("id=")[1];
-			exibirProjeto = trabalhos[itemRecebido][0];
-			tratarConteudo( exibirProjeto.nome, exibirProjeto.artista, exibirProjeto.conteudo );
-			document.getElementById("projetoAberto").style.height = altura + "px";
-			getById("projetoAberto").style.minHeight = (altura-50)+"px";
 		}
 
 	</script>
