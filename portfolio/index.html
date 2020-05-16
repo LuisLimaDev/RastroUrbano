@@ -59,6 +59,8 @@
 			#logo{
 				background-position: 0% 50%;
 				background-repeat: no-repeat;
+				display: grid;
+				grid-template-columns: 100%;
 			}
 
 			#tudo{
@@ -133,6 +135,7 @@
 
 			div#projetoAberto{
 				transition: 1s all ease;
+				width: 100%;
 				animation-name: darZoom;
 				animation-duration: 1s;
 				position: fixed;
@@ -248,6 +251,11 @@
 				text-align: center
 			}
 
+			a.miniaturas h5, a.miniaturas h6 {
+				padding: 20px 10px 0px 10px;
+				width: 80%;
+			}
+
 			#gradePortif{
 				width: 100%;
 				display: grid;
@@ -283,7 +291,7 @@
 
 			div#barraTitulo{
 				display: grid;
-				grid-template-columns: 50% 30% 80px;
+				grid-template-columns: 80% 80px;
 				justify-content: space-between;
 				position: fixed;
 				width: 100%;
@@ -340,15 +348,15 @@
 			}
 
 			#divEquipe .sociais a{
-				//background-size: 25%;
+				background-size: 90%;
 			}
 
 			#divEquipe .sociais{
-				height: 30px;
+				height: 50px;
 				//filter: invert(1);
 				grid-template-columns: 25% 25% 25% 25%;
 				min-width: 100px;
-				width: 120px;
+				width: 150px;
 				margin: 0px auto 20px auto;
 			}
 			
@@ -671,7 +679,9 @@
 			<header>
 			
 				<div id="menuBar">
-					<div id="logo" class="logo"></div><a href="#menuBlock" style="" id="abrirMenu" class="escondido">&#9776;</a>
+					<div id="logo" class="logo">
+						<a href="../index.html" style="line-height: 50px;width: 80px;color: transparent;">home</a>
+					</div><a href="#menuBlock" style="" id="abrirMenu" class="escondido">&#9776;</a>
 
 					<div id="lista" class="monoSpace menuItens">
 						<a href="http://luislimadev.github.io/RastroUrbano">HOME</a>
@@ -739,54 +749,54 @@
 						<p class="montserrat" style="text-align:center">Nossa equipe é formada por profissionais com diferentes especialidades,<br>
 						cada um colaborando para o melhor resultado nos projetos.</p>
 					</div>
-						<div id="divEquipe">
-							<div>
-								<section class="componenteEquipe" style="background-image: url('images/brunoMoura.png')" class="fotoBruno">
-									<img src="logos/brunoLogoDark.png"/>
-								</section>
-								<p class="montserrat"><b>BRUNO MOURA</b></p>
-								<p class="montserrat">Diretor de Fotografia</p>
-								<div class="sociais">
-									<span></span>
-									<a href="#primeiro" style="background-image:url('logos/instagramDark.png')"></a>
-									<a href="#primeiro" style="background-image:url('logos/flickrDark.png')"></a>
-									<span></span>
-								</div>
-							</div>
-							<div>
-								<section class="componenteEquipe" style="background-image: url('images/pauloGomes.png')" class="fotoPaulo">
-									<img src="logos/pauloLogoDark.png"/>
-								</section>
-								<p class="montserrat"><b>PAULO GOMES</b></p>
-								<p class="montserrat">Diretor de Arte</p>
-								<div class="sociais">
-									<a href="#primeiro" style="background-image:url('logos/instagramDark.png')"></a>
-									<a href="#primeiro" style="background-image:url('logos/facebookDark.png')"></a>
-									<a href="#primeiro" style="background-image:url('logos/behancepreto.png')"></a>
-									<a href="#primeiro" style="background-image:url('logos/youtubeQuadradoPreto.png')"></a>
-								</div>
-							</div>
-							<div>
-								<section class="componenteEquipe" style="background-image: url('images/luisLima.png')" class="fotoLuis">
-									<img src="logos/lldevLogoDark.png"/>
-								</section>
-								<p class="montserrat"><b> LUIS LIMA</b></p>
-								<p class="montserrat">Desenvolvedor Web</p>
-								<div class="sociais">
-									<span></span>
-									<a href="#primeiro" style="background-image:url('logos/facebookDark.png')"></a>
-									<a href="#primeiro" style="background-image:url('logos/githubDark.png')"></a>
-									<span></span>
-								</div>
+					<div id="divEquipe">
+						<div>
+							<section class="componenteEquipe" style="background-image: url('images/brunoMoura.png')" class="fotoBruno">
+								
+							</section>
+							<p class="montserrat"><b>BRUNO MOURA</b></p>
+							<p class="montserrat">Diretor de Fotografia</p>
+							<div class="sociais bruno">
+								<span></span>
+								<a href="https://www.flickr.com/people/brunomourafoto/" style="background-image:url('logos/instagramDark.png')"></a>
+								<a href="https://www.instagram.com/bruno.audiovisual/?hl=pt-br" style="background-image:url('logos/flickrDark.png')"></a>
+								<span></span>
 							</div>
 						</div>
+						<div>
+							<section class="componenteEquipe" style="background-image: url('images/pauloGomes.png')" class="fotoPaulo">
+								
+							</section>
+							<p class="montserrat"><b>PAULO GOMES</b></p>
+							<p class="montserrat">Diretor de Arte</p>
+							<div class="sociais paulo">
+								<span></span>
+								<a href="https://instagram.com/aec.paulo" style="background-image:url('logos/instagramDark.png')"></a>
+								<a href="https://www.behance.net/aec-paulo" style="background-image:url('logos/behancepreto.png')"></a>
+								<span></span>
+							</div>
+						</div>
+						<div>
+							<section class="componenteEquipe" style="background-image: url('images/luisLima.png')" class="fotoLuis">
+								
+							</section>
+							<p class="montserrat"><b> LUIS LIMA</b></p>
+							<p class="montserrat">Desenvolvedor Web</p>
+							<div class="sociais luis">
+								<span></span>
+								<a href="#primeiro" style="background-image:url('logos/facebookDark.png')"></a>
+								<a href="https://github.com/luislimadev" style="background-image:url('logos/githubDark.png')"></a>
+								<span></span>
+							</div>
+						</div>
+					</div>
 				</div>
 
 				<div id="final" style="">
 					<div id="contatoForm" class=" ">
 						<h1 class="monoSpace" style="font-size: 42px;">CONTATOS</h1>
 						<hr/>
-						<p class="montserrat"><a href="callTo:+551999200-8454">19.99200-8454</a></p>
+						<p class="montserrat"><a href="callTo:+551998728-3646">19.98728-3646</a></p>
 						<p class="montserrat"><a href="mailto://contato@rastrourbano.com.br">contato@rastrourbano.com.br</a></p>
 						
 						<div id="divForm">
@@ -801,10 +811,10 @@
 								</div>
 									<div class="botoesFim">
 										<input type="button" class="botao montserrat" value="ENVIAR"/>
-										<div class="sociais" style="">
-											<a href="#primeiro" style="background-image:url('http://localhost/rastro/img/fblogo.png')"></a>
-											<a href="#primeiro" style="background-image:url('http://localhost/rastro/img/ytlogo.png')"></a>
-											<a href="#primeiro" style="background-image:url('http://localhost/rastro/img/instalogo.png')"></a>
+										<div class="sociais" id="sociaisFim" style="">
+											<a href="#primeiro" style="background-image:url('logos/fblogo.png')"></a>
+											<a href="#primeiro" style="background-image:url('logos/instalogo.png')"></a>
+											<a href="#primeiro" style="background-image:url('logos/youtubeQuadradoBranco.png')"></a>
 										</div>
 									</div>
 							</form>
@@ -844,11 +854,26 @@
 		
 	</body>
 	<script>
+
+
+
+
 		altura = window.innerHeight;
 		largura = window.innerWidth;
 
 		larguraDoLoader = getById("espacoDoCarregando").offsetWidth;
 		getById("espacoDoCarregando").style.padding = ( ( altura - larguraDoLoader ) / 2 ) + "px " + ( ( largura - larguraDoLoader ) / 2 ) + "px";
+		
+		getById("menuBar").children[3].children[0].href = "https://www.facebook.com/rastrourbano.oficial/"; //facebook
+		getById("menuBar").children[3].children[1].href = "https://instagram.com/rastrourbano?igshid=1c1rbj7jgkhu8"; //instagram
+		getById("menuBar").children[3].children[2].href = "https://www.youtube.com/channel/UCjG2HYzoeqiqSZU00tE6EoQ?view_as=subscriber"; //youtube
+		getById("menuBlock").children[6].children[0].href = "https://www.facebook.com/rastrourbano.oficial/"; //facebook
+		getById("menuBlock").children[6].children[1].href = "https://instagram.com/rastrourbano?igshid=1c1rbj7jgkhu8"; //instagram
+		getById("menuBlock").children[6].children[2].href = "https://www.youtube.com/channel/UCjG2HYzoeqiqSZU00tE6EoQ?view_as=subscriber"; //youtube
+		getById("sociaisFim").children[0].href = "https://www.facebook.com/rastrourbano.oficial/"; //facebook
+		getById("sociaisFim").children[1].href = "https://instagram.com/rastrourbano?igshid=1c1rbj7jgkhu8"; //instagram
+		getById("sociaisFim").children[2].href = "https://www.youtube.com/channel/UCjG2HYzoeqiqSZU00tE6EoQ?view_as=subscriber"; //youtube
+
 
 		function tamanhosDiv(){
 			alturaN = window.innerHeight - 50;
@@ -881,7 +906,7 @@
 			link.href = "#projetoAberto?id=" + numtrab;
 			link.innerHTML = "<h5>" + trabalhos[numtrab][0].nome + "</h5><h6>" + trabalhos[numtrab][0].artista + "</h6>";
 			link.setAttribute("onclick", "abrirProjeto(" + numtrab + ")" )
-			link.setAttribute( "class", "numero" + numtrab );
+			link.setAttribute( "class", "miniaturas numero" + numtrab );
 			link.style.backgroundImage = "url('" + trabalhos[numtrab][0].capa +"')";
 			//divisor.appendChild( link );
 			getById("gradePortif").appendChild( link );
@@ -932,7 +957,8 @@
 		}
 		
 		function fechar(){
-			document.getElementById("projetoAberto").innerHTML = ""
+			document.getElementById("projetoAberto").innerHTML = "";
+			getById("projetoAberto").style.minHeight = "0px";
 			getById("projetoAberto").style.height = "0px";
 		}
 
@@ -943,6 +969,7 @@
 			btFecha.id = "btFecha";
 			btFecha.setAttribute("onclick", "fechar()");
 			btFecha.setAttribute("class", "btFecha");
+			barraTitulos = document.createElement("div");
 			barraTitulo = document.createElement("div");
 			divConteudo = document.createElement("div");
 			divConteudo.id = "divConteudo";
@@ -951,8 +978,9 @@
 			tituloDoTrabalho.innerText = nomeDoProjeto;
 			nomeDoCliente = document.createElement("h3");
 			nomeDoCliente.innerText = cliente;
-			barraTitulo.appendChild( tituloDoTrabalho );
-			barraTitulo.appendChild( nomeDoCliente );
+			barraTitulos.appendChild( tituloDoTrabalho );
+			barraTitulos.appendChild( nomeDoCliente );
+			barraTitulo.appendChild( barraTitulos );
 			barraTitulo.appendChild( btFecha );
 			document.getElementById("projetoAberto").appendChild(barraTitulo);
 			contaLinhasConteudo = 0;
@@ -974,7 +1002,7 @@
 					youtube = document.createElement("iframe");
 					youtube.src = linhaUnica[1];
 					youtube.setAttribute("X-Frames-Options", "same-origin");
-					document.getElementById("projetoAberto").appendChild(youtube);
+					divConteudo.appendChild(youtube);
 				} else if( linhaUnica[0] == "a.botao " ){
 					botao = document.createElement("a");
 					botao.href = linhaUnica[1];
