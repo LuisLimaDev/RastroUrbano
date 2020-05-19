@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Rastro Urbano :: Videos</title>
+		<meta charset="UTF-8">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+		<link rel="icon" type="image/png" href="../portfolio/logos/rastroRounded.png"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<!---->
+		<script type="text/javascript" src="videos.js"></script>
+		<style>
+			*{
+				margin: 0px;
+				padding: 0px;
+				transition: 2s margin ease; important!
+			}
+			
+			a.botao:hover{ 
+				animaton: 0.3s corTexto;
+			}
+
+			::-webkit-scrollbar-thumb {
+				background-color: rgba(0,0,0,0.5);
+				border-radius: 3px;
+				width: 3px;
+			}
+
+			::-webkit-scrollbar-track{
+				background-color: rgba(255,255,255,0.4);
+			}
+
+			::-webkit-scrollbar {
+				width: 10px;
+				height: 10px;
+				background-color: rgba(255,255,255,0.2);
+				border-radius: 3px;
+			}
+
+			
+			#corpo hr{ display: none }
+			
+			.tudo{ margin: 0% }
+			#aId, #atalhoContato div, #atalhoContato section, #atalhoContato div, #atalhoContato #fotos div a{ transition: 0.5s all ease }
+			
+			::target{
+				background-color: #f00;
+			}
+			
+			body{
+				font-family: verdana;
+			}
+			
+			#logo, .logo{
+				background-size: contain;
+				background-image: url('../portfolio/logos/rastroLogoLight.png');
+			}
+
+			#logo{
+				background-position: 0% 50%;
+				background-repeat: no-repeat;
+				display: grid;
+				grid-template-columns: 100%;
+			}
+
+			#tudo{
+				background-color: #fdfdff;
+			}
+			
+			#abrirMenu{
+				text-decoration: none;
+				color: #ffffff;
+				font-size: 14pt;
+				text-align: center;
+			}
+			
+			#menuBar{
+				display: grid;
+				grid-template-columns: 80px 60% 100px;
+				justify-content: space-between;
+				position: fixed;
+				width: 100%;
+				background-color: rgba(0,0,0,0.0);
+			}
+			
+			.menuItens{
+				font-size: 14pt;
+				//font-weight: 50px;
+				display: grid;
+				min-width: 400px;
+				grid-template-columns: 10% 10% 20% 15% 10% 15%;
+				justify-content: space-around;
+			}
+			
+			.menuItens li, .menuItens a, #janelaParalax span{
+				text-align: center;
+				list-style: none;
+				text-decoration: none;
+				color: #fff;
+				line-height: 50px;
+				transition: 0.5s all ease;
+				border: 2px solid rgba(255,255,255,0.0);
+			}
+			
+			#lista a:hover, #subMenu a:hover{
+				background-color: rgba(255,255,255,0.1);
+				background-size: 90px;
+				border-bottom: 2px solid #E2517E;
+			}
+			
+			.sociais a, #botoesFim .sociais a{
+				background-size: 50%;
+				background-position: 50%;
+				background-repeat: no-repeat;
+			}
+
+			.sociais{
+				display: grid;
+				grid-template-columns: 33% 33% 33%;
+			}
+
+			.montserrat{
+				font-family: 'Montserrat', sans-serif;
+			}
+
+			@font-face{
+				font-family: 'Rheiborn';
+				src: url('rheiborn.otf')
+			}
+			
+			a.botao:hover, input.botao:hover{
+				border: 1px solid rgba(0,0,0,0.3);
+				animation: 1s corTexto pause;
+				background-color: #E2517E;
+			}
+			.botao{
+				transition: 0.3s background-color ease;
+				//background-image: linear-gradient(45deg, #80af63, #4ea7a6);
+				background-color: #4EB191;
+				color: #ffffff;
+				text-decoration: none;
+				border-radius: 5px;
+				line-height: 50px;
+				padding: 5px 30px;
+				border: 1px solid rgba(0,0,0,0.0);
+			}
+			
+			hr{
+				border: 1px solid #444;
+				margin: 10px 0px;
+			}
+
+			.cartao h1{
+				margin-bottom: 25px;
+			}
+
+			.cartao{
+				width: 100%;
+				padding: 100px 0px;
+				border-radius: 5px;
+				background-attachment: fixed;
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-position: 50%;
+			}
+			
+			div#subMenu{
+				border: solid #aaaaaa;
+				border-width: 0px 0px 1px 0px;
+				padding: 0px 130px;
+			}
+			
+			div#subMenu a{
+				line-height: 50px;
+				color: white;
+				text-decoration: none;
+				font-family: monospace;
+				font-size: 15pt;
+				border: solid #4EB191;
+				border-width: 0px 0px 3px 0px;
+				padding: 10px;
+			}
+
+			#portfolio, #videos, #blog, #contatos, #final, #rodape, #infos{
+				background-color: #222222;
+				color: #fff;
+			}
+			
+			#parceiros{
+				background-color: #191919;
+			}
+			
+			#portfolio .cartao #tituloDaPagina h1{
+				font-size: 60pt;
+				text-align: center
+			}
+
+			#divEquipe .componenteEquipe img, #gradePortif a, #gradeVid a, #menuBlock a{
+				transition: 0.3s all ease;
+			}
+
+			#divEquipe{
+				display: grid;
+				grid-template-columns: 33.3% 33.3% 33.3%;
+				justify-content: space-around;
+				text-align: center;
+				padding: 0px 20%;
+				grid-gap: 5%;
+			}
+			
+			section.fotoBruno, a.fotoBruno{
+				
+			}
+			
+			section.fotoPaulo, a.fotoPaulo{
+				
+			}
+			
+			section.fotoLuis, a .fotoLuis{
+				
+			}
+
+			#divEquipe .componenteEquipe{
+				border-radius: 50%;
+				background-position: 50%;
+				background-size: cover;
+				border: 3px solid #aaa;
+				margin: 0px 15% 5% 15%;
+			}
+
+			#divEquipe .componenteEquipe img{
+				filter: opacity(0.0);
+				width: 100%;
+			}
+
+			#divEquipe .componenteEquipe:hover img{
+				//filter: opacity(0.4);
+			}
+			
+			#divEquipe h5{ font-weight: 600 }
+			
+			#divEquipe .sociais a:hover{
+				transform: scale(1.1);
+			}
+
+			#divEquipe a.botao{
+				padding: 5px 50px;
+				margin: 5% 0%;
+			}
+
+			#divEquipe .sociais a{
+				background-size: 90%;
+			}
+
+			#divEquipe .sociais{
+				height: 50px;
+				//filter: invert(1);
+				grid-template-columns: 25% 25% 25% 25%;
+				min-width: 100px;
+				width: 150px;
+				margin: 0px auto 20px auto;
+			}
+			
+			#gradeVid a:hover{
+				background-color: #888;
+			}
+
+			#gradeVid a{
+				text-decoration: none;
+				color: #fff;
+				background-repeat: no-repeat;
+				height: 100px;
+				padding: 10px 10px 0px 190px;
+				background-size: 175px 95px;
+				background-position: 5px;
+			}
+			
+			#gradeVid{
+				display: grid;
+				overflow-y: scroll;
+			}
+			
+			#displayVideos iframe{
+				border: 0px solid;
+				width: 100%;
+			}
+			
+			#videos{
+				//display: none;
+				//padding: 30px;
+			}
+
+			#displayVideos{
+				padding: 0px 0px 100px 0px;
+			}
+
+			#displayVideos{
+				display: grid;
+				grid-template-columns: 58% 40%;
+				grid-gap: 2%;
+			}
+
+			.sombraLeve{
+				box-shadow: 0px 10px 15px -5px #888;
+				border: 1px solid #eee;
+			}
+
+			@keyframes darZoom{
+				0%{ filter: opacity(0) }
+				50%{ transform: scale(1.02); box-shadow: 0px 15px 30px -15px #555 }
+				100%{ transform: scale(1.0) }
+			}
+
+			.escondido{
+				display: none;
+			}
+
+			form .botoesFim {
+				margin: 5% 0%;
+				display: grid;
+				grid-template-columns: 40% 20%;
+				justify-content: space-between;
+			}
+
+			form#formulario #campos {
+				display: grid;
+				grid-template-columns: 30% 30% 30%;
+				justify-content: space-between;
+				margin: 20px 0px;
+			}
+
+			#final a{
+				color: #fff;
+				text-decoration: none;
+			}
+			
+			#final {
+				display: grid;
+				grid-template-columns: 60% 40%;
+			}
+
+			div#contatoForm .botoesFim a, div#contatoForm .botoesFim input{
+				line-height: 25px;
+			}
+
+			div#contatoForm {
+				background-color: #111111;
+				padding: 50px 10%;
+			}
+			
+			#individuais{
+				display: grid;
+				grid-template-columns: 30% 30% 30%;
+				justify-content: space-between;
+				margin: 20px 0px;
+			}
+
+			div#gradeParsa, div#parceiros h1{
+				display: grid;
+				grid-template-columns: 25% 25% 25% 25%;
+				padding: 15% 10% 0% 15%;
+			}
+
+			div#gradeParsa section {
+				background-repeat: no-repeat;
+				background-size: 85%;
+				background-position: 50%;
+				color: #fff0;
+			}
+
+
+			textarea, #nome, #telefone, #email {
+				border-width: 0px 0px 1px 0px;
+				background-color: rgba(0,0,0,0.0);
+				margin: 10px 00px;
+				//padding: 10px 0px;
+				color: #fff;
+				font-size: 14pt;
+				font-family: montserrat;
+				width: 100%;
+			}
+
+			div#rodape, #final form{
+				margin: 0px;
+				//padding: 0px 0px 50px 0px;
+				display: grid;
+			}
+			
+			#infos a, #infos h3{
+				text-decoration: none;
+				color: #fff;
+				line-height: 30px;
+			}
+
+			#infos{
+				display: grid;
+				padding: 80px 0px;
+			}
+			
+			@keyframes corTexto{
+				0%{ color: #E2517E; background-color: #E2517E }
+				100%{ color: #fff; background-color: #4EB191 }
+			}
+			
+			@media only screen and (max-width: 950px) {
+			
+				.botao{
+					font-size: 12pt;
+					padding: 0px 10px;
+				}
+			
+				#divEquipe a.botao{
+					font-size: 10pt;
+					padding: 0px 10px;
+				}
+				
+				#individuais{
+					font-size: 12pt
+				}
+
+				#tituloDaPagina h1{
+					font-size: 40pt;
+					text-align: center
+				}
+			
+			}
+
+			@media only screen and (max-width: 650px) {
+			
+				#menuBar{
+					display: grid;
+					grid-template-columns: 50px 50px;
+					justify-content: space-between;
+					line-height: 50px;
+				}
+
+				div#menuBlock .sociais {
+					height: 80px;
+					width: 60%;
+					margin: 0% 20%;
+				}
+
+				#gradePortif {
+					width: 100%;
+					display: grid;
+					grid-template-columns: 50% 50%;
+				}
+
+				a.numero1 {
+					grid-row-start: 2;
+					grid-row-end: 5;
+				}
+
+				#divEquipe, #displayVideos{
+					display: block;
+				}
+
+				#divEquipe .sociais a{
+					background-size: 25px;
+				}
+
+				.botao, #sobre{
+					font-size: 12pt;
+				}
+
+				#gradeVid{
+					overflow-y: scroll;
+				}
+
+				#gradeVid a {
+					text-decoration: none;
+					color: #fff;
+					background-repeat: no-repeat;
+					height: 70px;
+					font-size: 12px;
+					padding: 0px 0px 0px 135px;
+					background-size: 125px 65px;
+					background-position: 5px;
+					margin: 0px 30px;
+				}
+				
+				form#formulario #campos {
+					display: block;
+				}
+
+				form#formulario, div.cartao div {
+					padding: 0px;
+				}
+
+				div.menuItens{
+				display: none;
+				}
+
+				#abrirMenu{
+					display: block;
+				}
+
+				#menuBlock:target .div.sociais{
+					height: 70px;
+				}
+
+				#menuBlock:target{
+					display: grid;
+					width: 320px;
+					position: fixed;
+					top: 50px;
+					background-color: #000;
+					animation-name: darZoom;
+					animation-duration: 0.5s;
+					transition: 0.3s background-color ease;
+				}
+				
+				#menuBlock section{
+					display: grid;
+					grid-template-columns: 80% 20%;
+					justify-content: space-between;
+				}
+				
+				#menuBlock a:hover{
+					background-color: #535353;
+				}
+			
+				#menuBlock a{
+					color: #fff;
+					text-decoration: none;
+					line-height: 40px;
+				}
+				
+				div#final{
+					display: block;
+				}
+			
+			}
+			
+			#carregando{
+				transition: 0.5s all ease;
+			}
+
+			#espacoDoCarregando{
+				position: fixed;
+				top: 0px;
+				background-color: #1c1c1c;
+				//background-color: rgba(255,255,255,0.7);
+			}
+			
+			.externa, .interna{
+				border-width: 50px;
+				border-style: solid;
+				border-color: #4EB191 #E2517E #4EB191 #E2517E;
+				border-radius: 50%;
+				animation: 3s carregando infinite;
+			}
+			
+			@keyframes carregando{
+				0%{}
+				100%{ transform: rotate(360deg) }
+			}
+			
+		</style>
+		
+		<script type="text/javascript">
+		
+			function getById(id){
+				return document.getElementById(id);
+			}
+		
+			function getByClass(cl){
+				return document.getElementsByClassName(cl);
+			}
+			
+			function novoElm(elemento){
+				return document.createElement(elemento);
+			}
+			
+		</script>
+		
+	</head>
+	
+	<body class="tagCorpo" id="tagCorpo">
+		<div class="apresentacao" id="apresentacao">
+
+
+
+			<header>
+			
+				<div id="menuBar">
+					<div id="logo" class="logo">
+						<a href="../index.html" style="line-height: 50px;width: 80px;color: transparent;">home</a>
+					</div><a href="#menuBlock" style="" id="abrirMenu" class="escondido">&#9776;</a>
+
+					<div id="lista" class="monoSpace menuItens">
+						<a href="http://luislimadev.github.io/RastroUrbano">HOME</a>
+						<a href="http://localhost/rastro#sobre">SOBRE</a>
+						<a href="#portfolio" style="border-color: rgba(0,0,0,0.0) rgba(0,0,0,0.0)#4EB191 rgba(0,0,0,0.0) ">PORTFOLIO</a>
+						<a href="#equipe">EQUIPE</a>
+						<a href="#videos">BLOG</a>
+						<a href="http://localhost/rastro#final">CONTATO</a>
+					</div>
+
+					<div id="" class="sociais">
+						<a href="#primeiro" style="background-image:url('../portfolio/logos/fblogo.png')"></a>
+						<a href="#primeiro" style="background-image:url('../portfolio/logos/instalogo.png')"></a>
+						<a href="#primeiro" style="background-image:url('../portfolio/logos/youtubeQuadradoBranco.png')"></a>
+					</div>
+					
+					
+				</div>
+				<div id="menuBlock" class="escondido monoSpace">
+
+					<section><a href="http://luislimadev.github.io/RastroUrbano">HOME</a>
+						<a href="#fecha" style="text-align: center">&times;</a><!--<a href="#fecha" class="escondido botao" id="btFecha">&times;</a>-->
+						</section>
+					<a href="http://localhost/rastro#sobre">SOBRE</a>
+					<a href="#portfolio" style="border-color: rgba(0,0,0,0.0) rgba(0,0,0,0.0)#4EB191 rgba(0,0,0,0.0) ">PORTFOLIO</a>
+					<a href="#equipe">EQUIPE</a>
+					<a href="#videos">BLOG</a>
+					<a href="http://localhost/rastro#final">CONTATO</a>
+
+					<div id="" class="sociais">
+						<a href="#primeiro" style="background-image:url('../portfolio/logos/fblogo.png')"></a>
+						<a href="#primeiro" style="background-image:url('../portfolio/logos/instalogo.png')"></a>
+						<a href="#primeiro" style="background-image:url('../portfolio/logos/youtubeQuadradoBranco.png')"></a>
+					</div>
+				</div>
+			</header>
+
+		</div>
+		
+			
+		<div id="tudo" class="tudo">
+
+			
+			<div id="corpo">
+
+				<div id="portfolio">
+					<div id="projetoAberto" class=""></div>
+					<div class="cartao" style="background-image: url('../portfolio/images/bg.png')">
+					<h1 class="monoSpace" style="" id="tituloDaPagina">VIDEOS</h1>
+					<hr/>
+					<p class="montserrat" style="text-align: center; display: none">Nossa equipe é formada por profissionais com diferentes especialidades,<br/>
+					cada um colaborando para o melhor resultado nos projetos.</p>
+					</div>
+					<div id="subMenu">
+						<a href="../portfolio/index.html" class="montserrat" style="border-color: #222222">PROJETOS</a>
+						<a href="#" class="montserrat">VIDEOS</a>
+					</div>
+					<div id="displayVideos" class="cartao">
+						<div id="iframe">
+							<iframe id="saidaVideo" src="https://www.youtube.com/embed/hhB-X2SZmHo" name="videoFrame"></iframe>
+						</div>
+						<div id="gradeVid" class="montserrat">
+						</div>
+					</div>
+				</div>
+
+				<div id="equipe">
+					<div class="cartao">
+						<h1 class="monoSpace" style="font-size: 42px; text-align: center">EQUIPE</h1>
+						<p class="montserrat" style="text-align:center">Nossa equipe é formada por profissionais com diferentes especialidades,<br>
+						cada um colaborando para o melhor resultado nos projetos.</p>
+					</div>
+					<div id="divEquipe">
+						<div>
+							<section class="componenteEquipe" style="background-image: url('../portfolio/images/brunoMoura.png')" class="fotoBruno">
+								
+							</section>
+							<p class="montserrat"><b>BRUNO MOURA</b></p>
+							<p class="montserrat">Diretor de Fotografia</p>
+							<div class="sociais bruno">
+								<span></span>
+								<a href="https://www.flickr.com/people/brunomourafoto/" style="background-image:url('../portfolio/logos/instagramDark.png')"></a>
+								<a href="https://www.instagram.com/bruno.audiovisual/?hl=pt-br" style="background-image:url('../portfolio/logos/flickrDark.png')"></a>
+								<span></span>
+							</div>
+						</div>
+						<div>
+							<section class="componenteEquipe" style="background-image: url('../portfolio/images/pauloGomes.png')" class="fotoPaulo">
+								
+							</section>
+							<p class="montserrat"><b>PAULO GOMES</b></p>
+							<p class="montserrat">Diretor de Arte</p>
+							<div class="sociais paulo">
+								<span></span>
+								<a href="https://instagram.com/aec.paulo" style="background-image:url('../portfolio/logos/instagramDark.png')"></a>
+								<a href="https://www.behance.net/aec-paulo" style="background-image:url('../portfolio/logos/behancepreto.png')"></a>
+								<span></span>
+							</div>
+						</div>
+						<div>
+							<section class="componenteEquipe" style="background-image: url('../portfolio/images/luisLima.png')" class="fotoLuis">
+								
+							</section>
+							<p class="montserrat"><b> LUIS LIMA</b></p>
+							<p class="montserrat">Desenvolvedor Web</p>
+							<div class="sociais luis">
+								<span></span>
+								<a href="#primeiro" style="background-image:url('../portfolio/logos/facebookDark.png')"></a>
+								<a href="https://github.com/luislimadev" style="background-image:url('../portfolio/logos/githubDark.png')"></a>
+								<span></span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="final" style="">
+					<div id="contatoForm" class=" ">
+						<h1 class="monoSpace" style="font-size: 42px;">CONTATOS</h1>
+						<hr/>
+						<p class="montserrat"><a href="callTo:+551998728-3646">19.98728-3646</a></p>
+						<p class="montserrat"><a href="mailto://contato@rastrourbano.com.br">contato@rastrourbano.com.br</a></p>
+						
+						<div id="divForm">
+							<form id="formulario" action="envio.html">
+								<div id="campos" class="campos">
+									<label for="nome"><input name="nome" id="nome" placeholder="NOME"/></label>
+									<label for="telefone"><input name="telefone" id="telefone" placeholder="TELEFONE"/></label>
+									<label for="email"><input name="email" id="email" placeholder="EMAIL"/></label>
+								</div>
+								<div class="resto">
+									<label for="mensagem"><textarea rows='4' id="mensagem" name="mensagem" placeholder="Digite sua mensagem"></textarea></label>
+								</div>
+									<div class="botoesFim">
+										<input type="button" class="botao montserrat" value="ENVIAR"/>
+										<div class="sociais" id="sociaisFim" style="">
+											<a href="#primeiro" style="background-image:url('../portfolio/logos/fblogo.png')"></a>
+											<a href="#primeiro" style="background-image:url('../portfolio/logos/instalogo.png')"></a>
+											<a href="#primeiro" style="background-image:url('../portfolio/logos/youtubeQuadradoBranco.png')"></a>
+										</div>
+									</div>
+							</form>
+							
+						</div>
+					</div>
+					
+					<div id="parceiros" class="">
+						<h1 id="site" class="monoSpace" style="font-size: 34px;">PARCEIROS</h1>
+						<div id="gradeParsa">
+							<section style="background-image: url('../portfolio/logos/mfLogo.png')">Maia's Family</section>
+							<section style="background-image: url('../portfolio/logos/bfco.png')">Big Field CO.</section>
+							<section style="background-image: url('../portfolio/logos/ZH.png')">Zero Hora</section>
+							<section style="background-image: url('../portfolio/logos/wm.png')">WMBeats</section>
+						</div>
+					</div>
+				</div>
+				
+				<div id="infos">
+					<footer style="text-align: center; font-size: 10px">
+						<p class="montserrat">&#169;2020 Agência Rastro Urbano</p>
+						<p class="montserrat">Todos os direitos reservados</p>
+					</footer>
+				</div>
+			</div>
+		</div>
+		
+				<div id="carregando">
+					<div id="espacoDoCarregando">
+						<div class="externa">
+							<div class="interna">
+							</div>
+						</div>
+					</div>
+				</div>
+
+		
+	</body>
+	<script>
+
+
+
+
+		altura = window.innerHeight;
+		largura = window.innerWidth;
+
+		larguraDoLoader = getById("espacoDoCarregando").offsetWidth;
+		getById("espacoDoCarregando").style.padding = ( ( altura - larguraDoLoader ) / 2 ) + "px " + ( ( largura - larguraDoLoader ) / 2 ) + "px";
+		
+		getById("menuBar").children[3].children[0].href = "https://www.facebook.com/rastrourbano.oficial/"; //facebook
+		getById("menuBar").children[3].children[1].href = "https://instagram.com/rastrourbano?igshid=1c1rbj7jgkhu8"; //instagram
+		getById("menuBar").children[3].children[2].href = "https://www.youtube.com/channel/UCjG2HYzoeqiqSZU00tE6EoQ?view_as=subscriber"; //youtube
+		getById("menuBlock").children[6].children[0].href = "https://www.facebook.com/rastrourbano.oficial/"; //facebook
+		getById("menuBlock").children[6].children[1].href = "https://instagram.com/rastrourbano?igshid=1c1rbj7jgkhu8"; //instagram
+		getById("menuBlock").children[6].children[2].href = "https://www.youtube.com/channel/UCjG2HYzoeqiqSZU00tE6EoQ?view_as=subscriber"; //youtube
+		getById("sociaisFim").children[0].href = "https://www.facebook.com/rastrourbano.oficial/"; //facebook
+		getById("sociaisFim").children[1].href = "https://instagram.com/rastrourbano?igshid=1c1rbj7jgkhu8"; //instagram
+		getById("sociaisFim").children[2].href = "https://www.youtube.com/channel/UCjG2HYzoeqiqSZU00tE6EoQ?view_as=subscriber"; //youtube
+
+
+		function tamanhosDiv(){
+			alturaN = window.innerHeight - 50;
+			//getById("sobre").style.minHeight = alturaN+"px";
+			//getById("sobre").style.minHeight = alturaN+"px";
+			getById("equipe").style.minHeight = alturaN+"px";
+			/**if ( altura < largura ){
+				getByClass("numero0")[0].style.height = getByClass("numero0")[0].offsetWidth + "px";
+				getByClass("numero1")[0].style.height = getByClass("numero1")[0].offsetWidth + "px";
+				getByClass("numero2")[0].style.height = getByClass("numero2")[0].offsetWidth + "px";
+				getByClass("numero3")[0].style.height = getByClass("numero3")[0].offsetWidth + "px";
+				getByClass("numero4")[0].style.height = getByClass("numero4")[0].offsetWidth + "px";
+			}**/
+		}
+
+
+		getByClass("componenteEquipe")[0].style.height = getByClass("componenteEquipe")[0].offsetWidth + "px";
+		getByClass("componenteEquipe")[1].style.height = getByClass("componenteEquipe")[1].offsetWidth + "px";
+		getByClass("componenteEquipe")[2].style.height = getByClass("componenteEquipe")[2].offsetWidth + "px";
+		getById("gradeParsa").children[0].style.height = getById("gradeParsa").children[0].offsetWidth + "px";
+		getById("gradeParsa").children[1].style.height = getById("gradeParsa").children[0].offsetWidth + "px";
+		getById("gradeParsa").children[2].style.height = getById("gradeParsa").children[0].offsetWidth + "px";
+		getById("gradeParsa").children[3].style.height = getById("gradeParsa").children[0].offsetWidth + "px";
+
+
+		/**
+		numtrab = 0;
+		while( trabalhos.length > numtrab ){
+			link = document.createElement("a");
+			link.href = "#projetoAberto?id=" + numtrab;
+			link.innerHTML = "<h5>" + trabalhos[numtrab][0].nome + "</h5><h6>" + trabalhos[numtrab][0].artista + "</h6>";
+			link.setAttribute("onclick", "abrirProjeto(" + numtrab + ")" )
+			link.setAttribute( "class", "miniaturas numero" + numtrab );
+			link.style.backgroundImage = "url('" + trabalhos[numtrab][0].capa +"')";
+			//divisor.appendChild( link );
+			getById("gradePortif").appendChild( link );
+			//console.log(link);
+			numtrab++;
+		}**/
+		//getById("indicadoresBanner").style.top = ( altura - 70 ) +"px";
+		//getById("rodape").style.height = ( altura / 2 )+"px";
+		//getById("comandosBanner").style.paddingTop = ( ( altura / 2 ) - 100).toString().replace(".","").slice(0,3) + "px";
+		//getById("comandosBanner").style.paddingBottom = ( ( altura / 2 ) - 50).toString().replace(".","").slice(0,3) + "px";
+
+		setTimeout(function(){
+			tamanhosDiv();
+			getById("carregando").style.display = "none";
+			//getById("tudo").style.margin = "0% 0%";
+		}, 3000);
+
+		
+		numVid = 1;
+		
+		while( videos.length > numVid ){
+			link = document.createElement("a");
+			link.href = videos[numVid][0].link;
+			link.text = videos[numVid][0].nome;
+			link.target = "videoFrame";
+			link.style.backgroundImage = "url('" + videos[numVid][0].capa +"')";
+			//divisor.appendChild( link );
+			getById("gradeVid").appendChild( link );
+			//console.log(link);
+			numVid++;
+			tamanhoFrame();
+		}
+		
+		function tamanhoFrame(){
+			getById("gradeVid").style.height = ( getById("gradeVid").children[0].offsetHeight * 4 ) + "px";
+			getById("saidaVideo").style.height = ( getById("gradeVid").children[0].offsetHeight * 4 ) + "px";
+		}
+
+
+		exibirProjeto = "";
+		function abrirProjeto(projetoParaAbrir){
+			document.getElementById("projetoAberto").innerHTML = "";
+			exibirProjeto = trabalhos[projetoParaAbrir][0];
+			tratarConteudo( exibirProjeto.nome, exibirProjeto.artista, exibirProjeto.conteudo );
+			window.scrollTo(0,0);
+			document.getElementById("projetoAberto").style.height = altura + "px";
+			getById("projetoAberto").style.minHeight = (altura-50)+"px";
+		}
+		
+		function fechar(){
+			document.getElementById("projetoAberto").innerHTML = "";
+			getById("projetoAberto").style.minHeight = "0px";
+			getById("projetoAberto").style.height = "0px";
+		}
+
+		function tratarConteudo( nomeDoProjeto, cliente, conteudoMesclado ){
+			btFecha = document.createElement("a");
+			btFecha.innerHTML = "&times;";
+			btFecha.href = "#fechar";
+			btFecha.id = "btFecha";
+			btFecha.setAttribute("onclick", "fechar()");
+			btFecha.setAttribute("class", "btFecha");
+			barraTitulos = document.createElement("div");
+			barraTitulo = document.createElement("div");
+			divConteudo = document.createElement("div");
+			divConteudo.id = "divConteudo";
+			barraTitulo.id = "barraTitulo";
+			tituloDoTrabalho = document.createElement("h1");
+			tituloDoTrabalho.innerText = nomeDoProjeto;
+			nomeDoCliente = document.createElement("h3");
+			nomeDoCliente.innerText = cliente;
+			barraTitulos.appendChild( tituloDoTrabalho );
+			barraTitulos.appendChild( nomeDoCliente );
+			barraTitulo.appendChild( barraTitulos );
+			barraTitulo.appendChild( btFecha );
+			document.getElementById("projetoAberto").appendChild(barraTitulo);
+			contaLinhasConteudo = 0;
+			linhasSeparadas = conteudoMesclado.split(";");
+			quantidadeDeItens = linhasSeparadas.length;
+			itensHTML = "";
+			while( contaLinhasConteudo < quantidadeDeItens ){
+				linhaUnica = linhasSeparadas[contaLinhasConteudo].split("=");
+				if( linhaUnica[0] == "p " ){
+					paragrafo = document.createElement("p");
+					paragrafo.innerText = linhaUnica[1];
+					paragrafo.setAttribute("class", "montserrat");
+					divConteudo.appendChild(paragrafo);
+				} else if( linhaUnica[0] == "img " ){
+					imagem = document.createElement("img");
+					imagem.src = linhaUnica[1];
+					divConteudo.appendChild(imagem);
+				} else if( linhaUnica[0] == "youtube " ){
+					youtube = document.createElement("iframe");
+					youtube.src = linhaUnica[1];
+					youtube.setAttribute("X-Frames-Options", "same-origin");
+					divConteudo.appendChild(youtube);
+				} else if( linhaUnica[0] == "a.botao " ){
+					botao = document.createElement("a");
+					botao.href = linhaUnica[1];
+					botao.text = "VER MAIS";
+					botao.setAttribute("class", "botao");
+					divConteudo.appendChild(botao);
+				}
+				contaLinhasConteudo++;
+			}
+			
+			document.getElementById("projetoAberto").appendChild(divConteudo);
+		}
+		
+		if (!(!(window.location.href.match("id"))) == true ){
+			itemRecebido = window.location.href.split("id=")[1];
+			exibirProjeto = trabalhos[itemRecebido][0];
+			tratarConteudo( exibirProjeto.nome, exibirProjeto.artista, exibirProjeto.conteudo );
+			document.getElementById("projetoAberto").style.height = altura + "px";
+			getById("projetoAberto").style.minHeight = (altura-50)+"px";
+		}
+
+	</script>
+	<script type="text/javascript">
+		
+		window.addEventListener("scroll", function(){
+			//console.log(window.scrollY);
+			jQuery(".divisor").css("background-position-y", ((window.scrollY / -10 ) + 50 ) + "%");
+			//comandosBanner.style.backgroundPosition = "50% " + ((window.scrollY / 32 ) + 50) + "%";
+			getById("menuBar").style.background = "rgba(0,0,0, " + (window.scrollY / (document.body.offsetHeight / 5 ) ).toString().slice(0,3) + ")";
+			//background-color: rgba(0,0,0,0.2)
+		});
+		
+		window.addEventListener("resize", function(){
+			//getById("indicadoresBanner").style.top = ( altura - 70 )+"px";
+			/**getByClass("numero0")[0].style.height = getByClass("numero0")[0].offsetWidth + "px";
+			getByClass("numero1")[0].style.height = getByClass("numero1")[0].offsetWidth + "px";
+			getByClass("numero2")[0].style.height = getByClass("numero2")[0].offsetWidth + "px";
+			getByClass("numero3")[0].style.height = getByClass("numero3")[0].offsetWidth + "px";
+			getByClass("numero4")[0].style.height = getByClass("numero4")[0].offsetWidth + "px";**/
+			getByClass("componenteEquipe")[0].style.height = getByClass("componenteEquipe")[0].offsetWidth + "px";
+			getByClass("componenteEquipe")[1].style.height = getByClass("componenteEquipe")[1].offsetWidth + "px";
+			getByClass("componenteEquipe")[2].style.height = getByClass("componenteEquipe")[2].offsetWidth + "px";
+			getById("gradeParsa").children[0].style.height = getById("gradeParsa").children[0].offsetWidth + "px";
+			getById("gradeParsa").children[1].style.height = getById("gradeParsa").children[0].offsetWidth + "px";
+			getById("gradeParsa").children[2].style.height = getById("gradeParsa").children[0].offsetWidth + "px";
+			getById("gradeParsa").children[3].style.height = getById("gradeParsa").children[0].offsetWidth + "px";
+			tamanhosDiv();
+		})
+
+	</script>
+</html>
