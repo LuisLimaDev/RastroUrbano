@@ -51,7 +51,8 @@
 			}
 			
 			body{
-				font-family: verdana;
+				font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+				font-weight: 300;
 			}
 			
 			#logo, .logo{
@@ -101,7 +102,8 @@
 				color: #fff;
 				line-height: 50px;
 				transition: 0.5s all ease;
-				border: 2px solid rgba(255,255,255,0.0);
+				border-width: 0px 0px 2px 0px;
+				border-color: transparent;
 			}
 			
 			#lista a:hover{
@@ -422,13 +424,13 @@
 			a.botao:hover, input.botao:hover{
 				border: 1px solid rgba(0,0,0,0.3);
 				animation: 1s corTexto pause;
-				background-color: #E2517E;
+				background-color: #E2517E; // Cor Rosa CorRosa
 			}
 			.botao{
 				transition: 0.3s background-color ease;
 				//background-image: linear-gradient(45deg, #80af63, #4ea7a6);
-				background-color: #4EB191;
-				color: #ffffff;
+				background-color: #4EB191; // cor Verde
+				color: white;
 				text-decoration: none;
 				border-radius: 5px;
 				line-height: 50px;
@@ -468,6 +470,11 @@
 				margin: 15% 10%;
 				min-width: 300px;
 			}
+
+			div#sobreDivTexto p {
+				text-align: justify;
+			}
+
 			#sobre section.botaoSobre{
 				margin: 5% 0%;
 			}
@@ -516,10 +523,15 @@
 				margin: 50px 0px;
 			}
 
+			#gradePortif a:hover h5, #gradePortif a:hover h6{
+				background-color: rgba(255,255,255,0.8);//#E2517E;
+				width: 100%;
+				padding: 20px 0px;
+			}
+
 			#gradePortif a:hover{
-				background-color: rgba(22,22,22,0.5);
-				text-shadow: 0px 0px 4px #000000;
-				color: rgba(255,255,255,1.0);
+				color: rgba(0,0,0,1.0);
+				text-align: center;
 			}
 
 			#divEquipe .componenteEquipe img, #gradePortif a, #gradeVid a, #menuBlock a{
@@ -915,10 +927,6 @@
 				  
 					<div class="camposDeTexto">
 						
-						<span class="grande">NYAK</span>
-						<br>
-						<span class="pequeno">NÃO DEIXE O RIO LEVAR</span>
-						<br>
 						<a href="portfolio/#projetoAberto?id=2" class="btBanner">VER MAIS</a>
 						
 					</div>
@@ -928,10 +936,6 @@
 				  
 					<div class="camposDeTexto">
 					
-						<span class="pequeno">EP - GH</span>
-						<br>
-						<span class="grande">2020</span>
-						<br>
 						<a href="portfolio/#projetoAberto?id=4" class="btBanner">VER MAIS</a>
 						
 					</div>
@@ -940,9 +944,6 @@
 				  
 					<div class="camposDeTexto">
 						
-						<span class="pequeno">PRÊMIO</span><br>
-						<span class="grande">R.U.A.</span>
-						<br>
 						<a href="portfolio/#projetoAberto?id=1" class="btBanner">VER MAIS</a>
 						
 					</div>
@@ -1143,9 +1144,9 @@ tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim v
 						<h1 id="site" class="monoSpace" style="font-size: 34px;">PARCEIROS</h1>
 						<div id="gradeParsa">
 							<section style="background-image: url('portfolio/logos/mfLogo.png')">Maia's Family</section>
-							<section style="background-image: url('portfolio/logos/bfco.png')">Big Field CO.</section>
-							<section style="background-image: url('portfolio/logos/ZH.png')">Zero Hora</section>
 							<section style="background-image: url('portfolio/logos/wm.png')">WMBeats</section>
+							<section style="background-image: url('portfolio/logos/ZH.png')">Zero Hora</section>
+							<section style="background-image: url('portfolio/logos/nu-04.png')">nu.</section>
 						</div>
 					</div>
 				</div>
@@ -1197,6 +1198,17 @@ tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim v
 			getById("videos").style.minHeight = alturaN+"px";
 			getById("blog").style.minHeight = alturaN+"px";
 			//getById("final").style.minHeight = alturaN+"px";
+			
+			getByClass("divisor")[0].height = altura+"px";
+			getByClass("divisor")[1].height = altura+"px";
+			getByClass("divisor")[2].height = altura+"px";
+			getByClass("divisor")[0].style.padding = (altura - 70 ) +"px 0px 30px 0px";
+			getByClass("divisor")[1].style.padding = (altura - 70 ) +"px 0px 30px 0px";
+			getByClass("divisor")[2].style.padding = (altura - 70 ) +"px 0px 30px 0px";
+
+			
+			getById("tudo").style.paddingTop = getByClass("divisor")[0].offsetHeight +"px";
+
 			if ( altura < largura ){
 				getById("gradePortif").children[0].style.height = getById("gradePortif").children[0].offsetWidth + "px";
 				getById("gradePortif").children[1].style.height = getById("gradePortif").children[0].offsetWidth + "px";
@@ -1238,11 +1250,6 @@ tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim v
 		getByClass("numero3")[0].style.height = getByClass("numero3")[0].offsetWidth + "px";
 		getByClass("numero4")[0].style.height = getByClass("numero4")[0].offsetWidth + "px";
 
-		espacoDeSobra = ( altura - getByClass("camposDeTexto")[0].offsetHeight );
-		getByClass("divisor")[0].style.padding = (espacoDeSobra / 2) +"px 0px";
-		getByClass("divisor")[1].style.padding = (espacoDeSobra / 2) +"px 0px";
-		getByClass("divisor")[2].style.padding = (espacoDeSobra / 2) +"px 0px";
-		getById("tudo").style.paddingTop = getByClass("divisor")[0].offsetHeight +"px";
 		//getById("indicadoresBanner").style.top = ( altura - 70 ) +"px";
 		//getById("rodape").style.height = ( altura / 2 )+"px";
 		//getById("comandosBanner").style.paddingTop = ( ( altura / 2 ) - 100).toString().replace(".","").slice(0,3) + "px";
@@ -1274,6 +1281,17 @@ tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim v
 			getById("gradeVid").style.height = ( getById("gradeVid").children[0].offsetHeight * 4 ) + "px";
 			getById("saidaVideo").style.height = ( getById("gradeVid").children[0].offsetHeight * 4 ) + "px";
 		}
+		
+		function rolagem( itemNaTela, posicaoNoMenu ){
+			lista = document.getElementsByClassName("menuItens");
+			objetoRecebido = itemNaTela;
+			if ( window.scrollY > (objetoRecebido.offsetTop - 100 ) && window.scrollY < ( (objetoRecebido.offsetHeight - 100) + objetoRecebido.offsetTop) ){
+				//console.log("O item " + objetoRecebido.id + " está na tela!");
+				lista[0].children[posicaoNoMenu].style.borderBottom = "2px solid #4EB191";
+			} else {
+				lista[0].children[posicaoNoMenu].style.borderBottom = "";
+			}
+		}
 
 	</script>
 	<script type="text/javascript">
@@ -1281,9 +1299,20 @@ tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim v
 		window.addEventListener("scroll", function(){
 			//console.log(window.scrollY);
 			jQuery(".divisor").css("background-position-y", ((window.scrollY / -10 ) + 50 ) + "%");
-			//comandosBanner.style.backgroundPosition = "50% " + ((window.scrollY / 32 ) + 50) + "%";
 			getById("menuBar").style.background = "rgba(0,0,0, " + (window.scrollY / (document.body.offsetHeight / 5 ) ).toString().slice(0,3) + ")";
-			//background-color: rgba(0,0,0,0.2)
+
+			if ( window.scrollY > document.getElementById("apresentacao").offsetHeight ){
+				getById("menuBar").style.background = "rgba(0,0,0,1.0)";
+				rolagem( getById("apresentacao"),0 );
+				rolagem( getById("sobre"),1 );
+				rolagem( getById("portfolio"),2 );
+				rolagem( getById("equipe"),3 );
+				rolagem( getById("blog"),4 );
+				rolagem( getById("final"),5 );
+			} else {
+				getById("menuBar").style.background = "rgba(0,0,0,0.0)";
+				rolagem( getById("apresentacao"),0 );
+			}
 		});
 		
 		window.addEventListener("resize", function(){
