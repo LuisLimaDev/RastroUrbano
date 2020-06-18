@@ -48,7 +48,8 @@
 			}
 			
 			body{
-				font-family: verdana;
+				font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+				font-weight: 300;
 			}
 			
 			#logo, .logo{
@@ -211,8 +212,9 @@
 			}
 
 			.cartao{
-				width: 100%;
-				padding: 100px 0px;
+				width: 90%;
+				margin: 5% 5% 3% 5%;
+				//padding: 5% 0px 0px 0px;
 				border-radius: 5px;
 				background-attachment: fixed;
 				background-size: cover;
@@ -220,10 +222,14 @@
 				background-position: 50%;
 			}
 			
+			.tituloTop h1{
+				padding: 150px 0px 150px 150px;
+			}
+			
 			div#subMenu{
 				border: solid #aaaaaa;
 				border-width: 0px 0px 1px 0px;
-				padding: 0px 130px;
+				padding: 0px 50px 0px 0px;
 			}
 			
 			div#subMenu a{
@@ -267,10 +273,15 @@
 				margin: 50px 0px;
 			}
 
+			#gradePortif a:hover h5, #gradePortif a:hover h6{
+				background-color: rgba(255,255,255,0.8);//#E2517E;
+				width: 100%;
+				padding: 20px 0px;
+			}
+
 			#gradePortif a:hover{
-				background-color: rgba(22,22,22,0.5);
-				text-shadow: 0px 0px 4px #000000;
-				color: rgba(255,255,255,1.0);
+				color: rgba(0,0,0,1.0);
+				text-align: center;
 			}
 
 			#divEquipe .componenteEquipe img, #gradePortif a, #gradeVid a, #menuBlock a{
@@ -729,8 +740,8 @@
 
 				<div id="portfolio">
 					<div id="projetoAberto" class=""></div>
-					<div class="cartao" style="background-image: url('images/bg.png')">
-					<h1 class="monoSpace" style="" id="tituloDaPagina">PORTFOLIO</h1>
+					<div class="tituloTop" style="background-image: url('images/bg.png')">
+						<h1>PORTFOLIO</h1>
 					<hr/>
 					<p class="montserrat" style="text-align: center; display: none">Nossa equipe é formada por profissionais com diferentes especialidades,<br/>
 					cada um colaborando para o melhor resultado nos projetos.</p>
@@ -826,9 +837,9 @@
 						<h1 id="site" class="monoSpace" style="font-size: 34px;">PARCEIROS</h1>
 						<div id="gradeParsa">
 							<section style="background-image: url('logos/mfLogo.png')">Maia's Family</section>
-							<section style="background-image: url('logos/bfco.png')">Big Field CO.</section>
-							<section style="background-image: url('logos/ZH.png')">Zero Hora</section>
 							<section style="background-image: url('logos/wm.png')">WMBeats</section>
+							<section style="background-image: url('logos/ZH.png')">Zero Hora</section>
+							<section style="background-image: url('logos/nu-04.png')">nu.</section>
 						</div>
 					</div>
 				</div>
@@ -972,6 +983,7 @@
 			barraTitulos = document.createElement("div");
 			barraTitulo = document.createElement("div");
 			divConteudo = document.createElement("div");
+			barraTitulos.style.margin = "20px 30px";
 			divConteudo.id = "divConteudo";
 			barraTitulo.id = "barraTitulo";
 			tituloDoTrabalho = document.createElement("h1");
@@ -981,6 +993,7 @@
 			barraTitulos.appendChild( tituloDoTrabalho );
 			barraTitulos.appendChild( nomeDoCliente );
 			barraTitulo.appendChild( barraTitulos );
+			//btFecha.style.width = barraTitulos.offsetHeight + "px";
 			barraTitulo.appendChild( btFecha );
 			document.getElementById("projetoAberto").appendChild(barraTitulo);
 			contaLinhasConteudo = 0;
@@ -1024,15 +1037,33 @@
 			getById("projetoAberto").style.minHeight = (altura-50)+"px";
 		}
 
+		function rolagem( itemNaTela, posicaoNoMenu ){
+			lista = document.getElementsByClassName("menuItens");
+			objetoRecebido = itemNaTela;
+			if ( window.scrollY > (objetoRecebido.offsetTop - 100 ) && window.scrollY < ( (objetoRecebido.offsetHeight - 100) + objetoRecebido.offsetTop) ){
+				//console.log("O item " + objetoRecebido.id + " está na tela!");
+				lista[0].children[posicaoNoMenu].style.borderBottom = "2px solid #4EB191";
+			} else {
+				lista[0].children[posicaoNoMenu].style.borderBottom = "";
+			}
+		}
+
 	</script>
 	<script type="text/javascript">
 		
 		window.addEventListener("scroll", function(){
 			//console.log(window.scrollY);
 			jQuery(".divisor").css("background-position-y", ((window.scrollY / -10 ) + 50 ) + "%");
-			//comandosBanner.style.backgroundPosition = "50% " + ((window.scrollY / 32 ) + 50) + "%";
-			getById("menuBar").style.background = "rgba(0,0,0, " + (window.scrollY / (document.body.offsetHeight / 5 ) ).toString().slice(0,3) + ")";
-			//background-color: rgba(0,0,0,0.2)
+
+			if ( window.scrollY > (document.getElementById("portfolio").offsetHeight - 100) ){
+				getById("menuBar").style.background = "rgba(0,0,0,1.0)";
+				rolagem( getById("portfolio"),2 );
+				rolagem( getById("equipe"),3 );
+				rolagem( getById("final"),5 );
+			} else {
+				getById("menuBar").style.background = "rgba(0,0,0,0.0)";
+				rolagem( getById("portfolio"),2 );
+			}
 		});
 		
 		window.addEventListener("resize", function(){
